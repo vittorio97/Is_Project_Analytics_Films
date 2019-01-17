@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file= "HeaderSito.jsp"%>
 
+
+
+<%@ include file="Footer.jsp"%>
 </body>
 </html>

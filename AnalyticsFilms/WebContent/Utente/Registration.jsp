@@ -14,7 +14,7 @@
 <%@ include file= "HeaderSito.jsp"%>
 
 <center>
-<form class = "formReg" style= "width: 30%">
+<form class = "formReg" style= "width: 30%  ; margin-top: 6.5% ; margin-bottom: 6.5%">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -41,8 +41,12 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Accept the condition</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  
+  
+  <button type="submit"  class="btn btn-primary">Submit</button>
+
 </form>
+
 </center>
 
 
