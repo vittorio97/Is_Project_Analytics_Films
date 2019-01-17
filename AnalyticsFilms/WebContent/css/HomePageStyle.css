@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+* { margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; }
+/* CSS Header */
+
+
+header{
+	
+	background-color:white;
+}
+
+center img{
+	
+	max-heidth: 200px;
+}
+
+.colorb{
+	overflow: hidden;
+	background-color:grey;
+}
+
+
+.logo {
+	
+	max-heidth: 200px;
+	background-color:white;
+	background:url(img/LOGO.jpg) center no-repeat;
+
+}
+
+
+.contHome{
+	display: flex;
+  		background-color: grey;
+}
+
+
+.search{
+	margin-left: 70%;
+	
+}
+
+.flex-form-container{
+	display: flex;
+	background-color: grey;
+}
+
+.login{
+	form {
+  	display: block;
+  	margin-top: 0em;
+}
+
+
+
+
+.card-group{
+	
+	display: flex;
+	background-color: grey;
+}
+
+	
+
+/* CSS FOOTER*/
+.footer{
+	position: static;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: grey ;
+    color:#ffffff;
+    font-size:medium;
+    margin-top:0;
+}
+
+.colore{
+	background-color: grey;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
