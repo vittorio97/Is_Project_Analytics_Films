@@ -44,6 +44,7 @@ public class AddFilm extends HttpServlet {
 		
 		Film film= new Film (TitoloFilm,Trama,Locandina,Categoria) ;
 		
+
 		try {
 			FilmManager.AddFilm(film);
 		} catch (SQLException e) {

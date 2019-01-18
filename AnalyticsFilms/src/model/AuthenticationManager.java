@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -29,7 +30,8 @@ import connectionPool.ConnectionPool;
 			pstmt.setString(1, u.getEmail());
 			pstmt.setString(2, u.getUsername());
 			pstmt.setString(3, u.getPassword());
-		
+			
+			
 			pstmt.executeUpdate();
 
 			pstmt.close();
@@ -69,7 +71,7 @@ import connectionPool.ConnectionPool;
 					pstmt.close();
 				}
 			}finally {
-				ConnectionPool.releaseConnection(connection);
+				ConnectionPool.releaseConnection(con);
 			}
 		}
 		
@@ -80,7 +82,7 @@ import connectionPool.ConnectionPool;
 		
 	
 		private static final String CHECK_USER = "SELECT * FROM Utente WHERE Email = ? AND Password = ?";
-		private static final String  NEW_USER = "INSERT INTO Utente VALUES (?,?,?)";
+		private static final String  NEW_USER = "INSERT INTO Utente VALUES (?,?,?,'Utente')";
 	
 	}
 

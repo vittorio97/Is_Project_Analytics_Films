@@ -7,22 +7,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Prodotto;
-import utils.DBConnection;
+import bean.Film;
+import connectionPool.ConnectionPool;
 
-public class FilmManager {private ProdottoDAO(){}
 
+public class FilmManager {
+	
 /**
  * Salva il prodotto nel database
- * @param p: {@link Prodotto}
+ * @param film: {@link Film}
  * @throws SQLException
  */
-public static void doSave(Prodotto p) throws SQLException
+public static void AddFilm(Film film) throws SQLException
 {
-    Connection con = null;
-    PreparedStatement pstmt = null;
-    con = DBConnection.getConnection();
-   
+	Connection con = ConnectionPool.getConnection();
+	PreparedStatement pstmt = null;
     pstmt = con.prepareStatement(DO_SAVE);
    
     Date date = Date.valueOf(p.getDataUscita());
