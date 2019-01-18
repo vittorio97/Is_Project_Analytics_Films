@@ -1,8 +1,18 @@
 package bean;
 
-public class Film {
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Film implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+	public Film() {
+		super();
+	}
+
 	public Film (String titoloFilm, String trama, String locandina, String categoria){
-		
+		super();
 		this.titoloFilm=titoloFilm;
 		this.trama=trama;
 		this.locandina=locandina;

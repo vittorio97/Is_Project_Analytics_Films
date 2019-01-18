@@ -1,11 +1,20 @@
 package bean;
 
+import java.io.Serializable;
+import java.sql.Date;
+
+public class Utente implements Serializable{
+	private static final long serialVersionUID = 1L;
 
 
-public class Utente {
+
+public Utente() {
+	super();
+}
+
 	
 	public Utente(String email, String username, String password, String ruolo){
-		
+		super();
 		this.email= email;
 		this.username = username;
 		this.password = password;

@@ -8,58 +8,109 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 import bean.Film;
+import bean.Prodotto;
 import bean.Cinema;
 import bean.Recensione;
 import connectionPool.ConnectionPool;
+import search.Findable;
+import search.SearchEngine;
+import util.IO;
+import utils.DBConnection;
 
 public class SearchManager {
 	
-	private static final String TABLE_NAME= "Film";
-	private final int NUMERO_LIBRI=8;
 
-	public Collection <Film> search (String titolo) throws SQLException {
-		Connection connection = null;
-		PreparedStatement preparedStatement = null;
-
-		Collection <Film> libri = new LinkedList<Film>();
-
-		String selectSQL = "SELECT * FROM film WHERE titoloFilm = ?";
-
-
-		try {
-			connection = ConnectionPool.getConnection();
-			preparedStatement = connection.prepareStatement(selectSQL);
-			
-			preparedStatement.getString(1
-			preparedStatement.getString(2,
-			preparedStatement.getString(3,
-			
-			ResultSet rs = preparedStatement.executeQuery();
-
-			while (rs.next()) {
-				Film bean = new Film();
-
-				bean.setTitolo(rs.getString("TitoloFilm"));
-				bean.setTtama(rs.getString("Trama"));
-				bean.setLocandina(rs.getString("Locandina"));
-				bean.setCategoria(rs.getString("Categoria"));
-				
-				
-				
-				
-				films.add(bean);
-			}
-
-		} finally {
-			try {
-				if (preparedStatement != null)
-					preparedStatement.close();
-			} finally {
-				DriverMaagerConnectionPool.releaseConnection(connection);
-			}
-		}
-		return films;
-	}
-	
+    /**
+     * recupera un prodotto a partire dal suo id
+     * @param idProdotto: id del prodotto da recuperare
+     * @return Prodotto: {@link Prodotto}
+     * @throws SQLException
+     */
+    public static Prodotto doRetrieveByKey(int idProdotto) throws SQLException
+    {
+        String sql = "SELECT * FROM prodotto WHERE idProdotto = ?";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        con = DBConnection.getConnection();
+       
+        pstmt = con.prepareStatement(sql);
+        pstmt.setInt(1, idProdotto);
+        ResultSet rs = pstmt.executeQuery();
+        
+        //fix: operation not allowed after result set is closed
+        Prodotto prodotto = converti(rs);
+        
+        rs.close();
+        pstmt.close();
+        con.close();       
+       
+        return prodotto;
+           
+    }
+      
+    /**
+     * Effettua la ricerca dei prodotti.
+     * @param query: query di ricerca immessa dall'utente
+     * @return ArrayList<Prodotto>: una lista di prodotti
+     * @throws SQLException
+     * @author Vittorio
+     */
+    public static ArrayList<Prodotto> search(String query) throws SQLException{
+       
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        con = DBConnection.getConnection();
+       
+        pstmt = con.prepareStatement(RETRIVE_ALL);
+       
+        //retrive products
+        //-------------------------------------------------------------------------
+        ResultSet rs = pstmt.executeQuery();
+      
+        List<Findable> list = new ArrayList<>();
+       
+        try {
+            while (rs.next()) {
+                Prodotto p = new Prodotto(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getFloat(8), rs.getInt(9), rs.getDate(10).toLocalDate(), rs.getString(12));
+                list.add(p);
+            }
+ 
+        } catch (Exception e) {
+            IO.err("ERROR", e.getMessage());
+            e.printStackTrace();
+        }
+        //-------------------------------------------------------------------------
+       
+        //search
+        //-------------------------------------------------------------------------
+        SearchEngine se = SearchEngine.getInstance();
+       
+        System.out.println("searching...");
+       
+        List<Findable> risultati = se.search(query, list);
+        //-------------------------------------------------------------------------
+       
+        pstmt.close();
+        con.close();       
+       
+        ArrayList<Prodotto> prodotti = new ArrayList<>();
+        risultati.forEach((f) -> prodotti.add((Prodotto) f));
+       
+        return prodotti;
+    }
+    private static final String DO_UPDATE= "UPDATE Prodotto SET Nome = ?, Produttore = ?, Piattaforma= ? , Genere= ? , Descrizione= ? , Immagini= ?, Prezzo= ? , Disponibilita= ?, DataUscita= ?, numVenduti= ?, linkVideo= ? WHERE idProdotto = ?";
+    private static final String RICERCA_DA_MENU_CONSOLE = "SELECT * FROM Prodotto WHERE Disponibilita>=0 AND (Nome LIKE ? OR Nome LIKE ? OR Nome LIKE ?"
+            + "AND Genere = ?)";
+    private static final String RICERCA_DA_MENU_NAV = "SELECT * FROM Prodotto WHERE Disponibilita>=0 AND (Produttore LIKE ? OR Produttore LIKE ? OR Produttore LIKE ?"
+            + "OR Piattaforma LIKE ? OR Piattaforma = ? )";
+    private static final String RICERCA_DA_MENU_GIOCHI = "SELECT * FROM Prodotto WHERE Disponibilita>=0 AND (Piattaforma LIKE ? OR Piattaforma LIKE ? OR Piattaforma LIKE ?)";
+    private static final String PIU_VENDUTI = "SELECT * FROM Prodotto WHERE Disponibilita>=0 ORDER BY numVenduti DESC LIMIT 0,5";
+    private static final String ULTIMI_ARRIVI = "SELECT * FROM Prodotto WHERE Disponibilita>=0 ORDER BY DataUscita DESC LIMIT 0,5";
+    private static final String DO_SAVE ="INSERT INTO Prodotto(Nome, Produttore, Piattaforma, Genere, Descrizione, Immagini, Prezzo, Disponibilita, DataUscita, numVenduti, linkVideo) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+    private static final String UPDATE_QUANTITY="UPDATE Prodotto SET Disponibilita = ?, numVenduti = ? WHERE idProdotto = ?";
+    private static final String REMOVE_PRODUCT="UPDATE Prodotto SET Disponibilita = ? WHERE idProdotto = ?";
+    private static final String RETRIVE_ALL = "SELECT * FROM prodotto p WHERE Disponibilita>=0";
+}

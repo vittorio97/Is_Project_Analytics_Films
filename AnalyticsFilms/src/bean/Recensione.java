@@ -1,8 +1,17 @@
 package bean;
 
 import java.sql.Date;
+import java.io.Serializable;
 
-public class Recensione {
+
+public class Recensione implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+
+
+public Recensione() {
+	super();
+}
 	
 	public Recensione(String titolo, String testo, Date data){
 		

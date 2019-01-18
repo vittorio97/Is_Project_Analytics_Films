@@ -2,8 +2,19 @@ package bean;
 
 import java.sql.Time;
 
-public class Cinema {
+import java.io.Serializable;
+
+public class Cinema implements Serializable{
+	
+
+	private static final long serialVersionUID = 1L;
+
+	public Cinema() {
+		super();
+	}
+	
 	public Cinema(String nome, String luogo, Time orario){
+		super();
 		this.nome=nome;
 		this.luogo=luogo;
 		this.orario=orario;
