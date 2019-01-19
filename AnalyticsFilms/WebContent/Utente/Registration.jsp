@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -14,31 +15,35 @@
 <%@ include file= "HeaderSito.jsp"%>
 
 <center>
-<form class = "formReg" style= "width: 30%  ; margin-top: 6.5% ; margin-bottom: 6.5%">
+
+<form class = "formReg" action = "../../../Homepage" method= "post"  name="login" id="form"
+ 
+  style= "width: 30%  ; margin-top: 
+  6.5% ; margin-bottom: 6.5%" >
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type= "text" class="form-control" name="email"  >
     
   </div>
   
   <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
-    <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+    <label for="exampleInputEmail1"> Username </label>
+    <input type="text" class="form-control" name="username" >
     
   </div>
   
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" name="password" >
   </div>
   
   <div class="form-group">
     <label for="exampleInputPassword1">Repeat Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="RepeatPassword">
+    <input type="password" class="form-control" name="password">
   </div>
   
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" name="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Accept the condition</label>
   </div>
   

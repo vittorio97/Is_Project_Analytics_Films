@@ -18,12 +18,12 @@ public class ConnectionPool  {
 			System.out.println("DB driver not found:"+ e.getMessage());
 		} 
 	}
-		
+
 	private static synchronized Connection createDBConnection() throws SQLException {
 		Connection newConnection = null;
 		String ip = "localhost";
 		String port = "3360";
-		String db = "progettoIS";
+		String db = "progettois";
 		String username = "root";
 		String password = "root";
 
@@ -32,7 +32,7 @@ public class ConnectionPool  {
 		newConnection.setAutoCommit(false);
 		return newConnection;
 	}
-
+	
 
 	public static synchronized Connection getConnection() throws SQLException {
 		Connection connection;

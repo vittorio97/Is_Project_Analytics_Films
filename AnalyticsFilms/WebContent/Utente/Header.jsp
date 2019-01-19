@@ -33,14 +33,7 @@
        
     </ul>
     <div class = "flex-form-container">
-		<form class= "login">
- 		<form action="Login" method="post">
-  			Email: <input type="text" name="email"><br>
-  			Password: <input type="password" name="password"><br> 
-  				<a href = "RecovePass.jsp"> Forgot password? </a>
-					<input type="submit" value="Submit">
-						</form>
-							</form>
+		
 </div>
     
    

@@ -1,3 +1,12 @@
+<%
+if(request.getSession().getAttribute("admin")!=null){
+	boolean admin= (boolean) request.getSession().getAttribute("admin");
+	if(!admin){
+		response.sendRedirect("RecovePassword.jsp");
+	}
+}
+%>
+
 <!doctype html>
 <html>
 <head>
@@ -19,6 +28,24 @@
 		
 	
   </div>
+  
+  <form class= "login">
+ 		<form class="log" action="../../Login" method="post" name="login" id="form">
+  			Email: <input type="text" name="email"><br>
+  			Password: <input type="password" name="password"><br> 
+  				<a href = "RecovePassword.jsp"> Forgot password? </a>
+					<input type="submit" value="Submit">
+						</form>
+							</form>
+	<%
+    if(request.getSession().getAttribute("esiste")!=null)
+    if((boolean)request.getSession().getAttribute("esiste")==false){
+    %>
+    <p id="error" style="color:black"> password o email errati</p>
+    <%request.getSession().removeAttribute("esiste"); } %>
+    
+    
+    
 	<div class = "colore">
 	<div style="height:30px"></div>
 	
