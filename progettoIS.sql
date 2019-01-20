@@ -1,4 +1,4 @@
-create progettois;
+create schema progettois;
 use progettois;
 
 CREATE TABLE UTENTE (
