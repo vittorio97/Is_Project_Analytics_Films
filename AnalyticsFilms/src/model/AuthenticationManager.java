@@ -1,52 +1,56 @@
 package model;
 
+
 import java.sql.Connection;
-
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import bean.Utente;
 import connectionPool.ConnectionPool;
-	
 
-	/**
-	 * Classe Authentication Manager
-	 * @author Vittorio
-	 */
+
+/**
+ * Verifica il login di un utente
+ * @param u: {@link Utente}
+ * @throws SQLException
+ */
 	public class AuthenticationManager {
 		
-		public Utente login(String email, String password) throws SQLException {
-			Connection conn= ConnectionPool.getConnection();
-			PreparedStatement pStatement= null;
+		public static Utente login(String email, String password) throws SQLException {
 			
-			Utente utente= null;
-			
-			try {
-				pStatement= conn.prepareStatement(CHECK_USER);
-				pStatement.setString(1, email);
-				pStatement.setString(2, password);
-				ResultSet rs= pStatement.executeQuery();
-				while(rs.next()) {
-					utente= new Utente();
-					utente.setEmail(rs.getString("email"));
-					utente.setUsername(rs.getString("username"));
-					utente.setRuolo(rs.getString("ruolo"));
-				}
-			}finally {
-				try {
-					if(pStatement!= null) {
-						pStatement.close();
-					}
-				}finally {
-					ConnectionPool.releaseConnection(conn);
-				}
-			}
-			
-			return utente;
-		}
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			con = ConnectionPool.getConnection();
 
+			pstmt = con.prepareStatement(CHECK_USER);
+			pstmt.setString(1, email);
+			pstmt.setString(2, password);
+
+			Utente user = new Utente();
+
+			ResultSet rset = pstmt.executeQuery();
+			
+			if (rset.next()) {
+				user.setEmail(rset.getString("Email"));
+				user.setUsername(rset.getString("Username"));
+				user.setPassword(rset.getString("Password"));
+				user.setRuolo(rset.getString("Ruolo"));
+				
+
+				pstmt.close();
+				con.close();
+
+				return user;
+				
+			} else {
+				
+				pstmt.close();
+				con.close();
+
+				return user;
+			}
+		}
 		
 		/**
 		 * Inserisce un nuovo utente nel database

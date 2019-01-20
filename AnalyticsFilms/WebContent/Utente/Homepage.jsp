@@ -29,14 +29,14 @@ if(request.getSession().getAttribute("admin")!=null){
 	
   </div>
   
-  <form class= "login">
+ 
  		<form class="log" action="../../Login" method="post" name="login" id="form">
   			Email: <input type="text" name="email"><br>
   			Password: <input type="password" name="password"><br> 
   				<a href = "RecovePassword.jsp"> Forgot password? </a>
 					<input type="submit" value="Submit">
 						</form>
-							</form>
+							
 	<%
     if(request.getSession().getAttribute("esiste")!=null)
     if((boolean)request.getSession().getAttribute("esiste")==false){

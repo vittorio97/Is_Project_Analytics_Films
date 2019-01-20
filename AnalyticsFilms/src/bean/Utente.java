@@ -1,7 +1,11 @@
 package bean;
 
 import java.io.Serializable;
+
 import java.sql.Date;
+import java.sql.SQLException;
+
+import model.AuthenticationManager;
 
 public class Utente implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -50,6 +54,7 @@ public Utente() {
 	}
 	
 
+	
 
 
 

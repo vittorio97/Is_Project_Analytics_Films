@@ -16,7 +16,7 @@
 
 <center>
 
-<form class = "formReg" action = "../../../Homepage" method= "post"  name="login" id="form"
+<form class = "formReg" action = "../../Registration"  method= "post"  name="registration" id="form"
  
   style= "width: 30%  ; margin-top: 
   6.5% ; margin-bottom: 6.5%" >

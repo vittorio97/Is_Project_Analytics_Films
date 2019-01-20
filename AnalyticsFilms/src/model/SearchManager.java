@@ -2,6 +2,7 @@ package model;
 
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,43 +12,40 @@ import java.util.LinkedList;
 import java.util.List;
 
 import bean.Film;
-import bean.Prodotto;
 import bean.Cinema;
 import bean.Recensione;
 import connectionPool.ConnectionPool;
-import search.Findable;
-import search.SearchEngine;
-import util.IO;
-import utils.DBConnection;
+
+
 
 public class SearchManager {
 	
 
     /**
-     * recupera un prodotto a partire dal suo id
-     * @param idProdotto: id del prodotto da recuperare
-     * @return Prodotto: {@link Prodotto}
+     * recupera un film a partire dal suo TitoloFilm
+     * @param TitoloFilm: TitoloFilm del film da recuperare
+     * @return Film: {@link Film}
      * @throws SQLException
      */
-    public static Prodotto doRetrieveByKey(int idProdotto) throws SQLException
+    public static Film searchByTitolo(String TitoloFilm) throws SQLException
     {
-        String sql = "SELECT * FROM prodotto WHERE idProdotto = ?";
+        String sql = "SELECT * FROM prodotto WHERE TitoloFilm = ?";
         Connection con = null;
         PreparedStatement pstmt = null;
-        con = DBConnection.getConnection();
+        con = ConnectionPool.getConnection();
        
         pstmt = con.prepareStatement(sql);
-        pstmt.setInt(1, idProdotto);
+        pstmt.setString(1, TitoloFilm);
         ResultSet rs = pstmt.executeQuery();
         
-        //fix: operation not allowed after result set is closed
-        Prodotto prodotto = converti(rs);
+       
+        Film film = converti(rs);
         
         rs.close();
         pstmt.close();
         con.close();       
        
-        return prodotto;
+        return film;
            
     }
       

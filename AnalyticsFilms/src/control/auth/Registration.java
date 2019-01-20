@@ -48,7 +48,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 try {
 		
 		manager.registration(user);
-		response.sendRedirect("Utente/Homepage.jsp");
+		response.sendRedirect("Homepage.jsp");
 
 } catch (SQLException e) {
 e.printStackTrace();
