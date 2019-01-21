@@ -21,18 +21,18 @@ public class ConnectionPool  {
 
 	private static synchronized Connection createDBConnection() throws SQLException {
 		Connection newConnection = null;
-		String ip = "localhost";
-		String port = "3360";
+		String ip = "127.0.0.1";
+		String port = "3306";
 		String db = "progettois";
 		String username = "root";
 		String password = "root";
-
+		
 		newConnection = DriverManager.getConnection("jdbc:mysql://"+ ip+":"+ port+"/"+db, username, password);
 
 		newConnection.setAutoCommit(false);
 		return newConnection;
 	}
-	
+
 
 	public static synchronized Connection getConnection() throws SQLException {
 		Connection connection;

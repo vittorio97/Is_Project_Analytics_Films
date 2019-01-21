@@ -1,5 +1,5 @@
-create schema progettois;
-use progettois;
+create schema progettoIS;
+use progettoIS;
 
 CREATE TABLE UTENTE (
 	Email varchar(30) primary key,
@@ -55,8 +55,6 @@ CREATE TABLE CINEMA (
     foreign key(TitoloFilm) references FILM(TitoloFilm)
     on delete cascade on update cascade
     );
-    
-    
     
     
     

@@ -2,6 +2,7 @@ package model;
 
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,39 +18,36 @@ import connectionPool.ConnectionPool;
  */
 	public class AuthenticationManager {
 		
-		public static Utente login(String email, String password) throws SQLException {
+		public Utente login(String email, String password) throws SQLException {
+			Connection connection= ConnectionPool.getConnection();
+			PreparedStatement pStatement= null;
 			
-			Connection con = null;
-			PreparedStatement pstmt = null;
-			con = ConnectionPool.getConnection();
-
-			pstmt = con.prepareStatement(CHECK_USER);
-			pstmt.setString(1, email);
-			pstmt.setString(2, password);
-
-			Utente user = new Utente();
-
-			ResultSet rset = pstmt.executeQuery();
+			String selectQ= "SELECT * FROM utente WHERE email = ? AND psw = ?";
+			Utente utente= null;
 			
-			if (rset.next()) {
-				user.setEmail(rset.getString("Email"));
-				user.setUsername(rset.getString("Username"));
-				user.setPassword(rset.getString("Password"));
-				user.setRuolo(rset.getString("Ruolo"));
+			try {
+				pStatement= connection.prepareStatement(selectQ);
+				pStatement.setString(1, email);
+				pStatement.setString(2, password);
+				ResultSet rs= pStatement.executeQuery();
+				while(rs.next()) {
+					utente= new Utente();
+					utente.setEmail(rs.getString("email"));
+					utente.setUsername(rs.getString("username"));
+					utente.setRuolo(rs.getString("cognome"));
 				
-
-				pstmt.close();
-				con.close();
-
-				return user;
-				
-			} else {
-				
-				pstmt.close();
-				con.close();
-
-				return user;
+				}
+			}finally {
+				try {
+					if(pStatement!= null) {
+						pStatement.close();
+					}
+				}finally {
+					ConnectionPool.releaseConnection(connection);
+				}
 			}
+			
+			return utente;
 		}
 		
 		/**
@@ -57,14 +55,16 @@ import connectionPool.ConnectionPool;
 		 * @param u: {@link Utente}
 		 * @throws SQLException
 		 */
-		 public boolean registration(Utente u) throws SQLException {
+		 public boolean add(Utente u) throws SQLException {
 			
 			Connection con = ConnectionPool.getConnection();
+			System.out.println(con);
 			PreparedStatement pstmt = null;
 			boolean registrator = false;
 			
 			try{
 				pstmt = con.prepareStatement(NEW_USER);
+				System.out.println(u.getEmail());
 				pstmt.setString(1, u.getEmail());
 				pstmt.setString(2, u.getUsername());
 				pstmt.setString(3, u.getPassword());
@@ -85,7 +85,7 @@ import connectionPool.ConnectionPool;
 							
 				}
 				}finally{
-					ConnectionPool.releaseConnection(con);
+				
 				}
 			}
 			
