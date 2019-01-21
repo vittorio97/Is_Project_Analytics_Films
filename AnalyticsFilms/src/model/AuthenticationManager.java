@@ -22,19 +22,18 @@ import connectionPool.ConnectionPool;
 			Connection connection= ConnectionPool.getConnection();
 			PreparedStatement pStatement= null;
 			
-			String selectQ= "SELECT * FROM utente WHERE email = ? AND psw = ?";
 			Utente utente= null;
 			
 			try {
-				pStatement= connection.prepareStatement(selectQ);
+				pStatement= connection.prepareStatement(CHECK_USER);
 				pStatement.setString(1, email);
 				pStatement.setString(2, password);
 				ResultSet rs= pStatement.executeQuery();
 				while(rs.next()) {
 					utente= new Utente();
 					utente.setEmail(rs.getString("email"));
-					utente.setUsername(rs.getString("username"));
-					utente.setRuolo(rs.getString("cognome"));
+					
+					
 				
 				}
 			}finally {
