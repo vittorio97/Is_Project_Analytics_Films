@@ -19,7 +19,7 @@
 	style= "width: 30%  ; margin-top: 10% ; margin-bottom: 6.5%">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="text" class="form-control" name="email">
+    <input type="text" class="form-control" name="email" placeholder="Enter Email">
     
   </div>
   
