@@ -1,101 +1,113 @@
-<%
-if(request.getSession().getAttribute("admin")!=null){
-	boolean admin= (boolean) request.getSession().getAttribute("admin");
-	if(!admin){
-		response.sendRedirect("RecovePassword.jsp");
-	}
-}
-%>
-
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-	<link href="css/HomePageStyle.css" type="text/css" rel="stylesheet" />
-	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+	<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
+	<title>AnalyticsFilms</title>
 </head>
 	
 <body>
-		
    
 	<%@ include file= "Header.jsp"%> 
 	
-	
-	<div class= "contHome">
+	<section id="cover">
 		
-	
-  </div>
-  
- 
- 		<form class="log" action="../../Login" method="post" name="login" id="form">
-  			Email: <input type="text" name="email"><br>
-  			Password: <input type="password" name="password"><br> 
-  				<a href = "RecovePassword.jsp"> Forgot password? </a>
-					<input type="submit" value="Submit">
-						</form>
-							
-	<%
-    if(request.getSession().getAttribute("esiste")!=null)
-    if((boolean)request.getSession().getAttribute("esiste")==false){
-    %>
-    <p id="error" style="color:black"> password o email errati</p>
-    <%request.getSession().removeAttribute("esiste"); } %>
-    
-    
-    
-	<div class = "colore">
-	<div style="height:30px"></div>
-	
-	
-</div>
-<div class = "colore">
-	<div class = "colore">
-  <div style="height:30px"></div>
-  
-  
-    <h2 class="noDisplay">Film in evidenza</h2> 
-    
-    
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
- 	
- 	</div>
-	<div class="card-deck">
-  <div class="card">
-    <img src="../locandine/Gifted.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Gifted</h5>
-      <p class="card-text">Uno zio single intraprende una battaglia legale per ottenere la custodia della nipote, giovane prodigio della matematica, e garantirle una vita normale nonostante l'opposizione della madre.</p>
-      <p class="card-text"><small class="text-muted">Last updated 20 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="../locandine/TheImitationGame.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">The Imitation Game</h5>
-      <p class="card-text">La vita del matematico inglese Alan Turing, genio indiscusso del XX secolo, considerato uno dei padri dell'informatica e dei moderni computer, fino alla sua precoce e tragica scomparsa.</p>
-      <p class="card-text"><small class="text-muted">Last updated 2 hours ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="../locandine/ShutterIsland.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Shutter Island</h5>
-      <p class="card-text">Rachel Salado, paziente del manicomio criminale sull'isola di Shutter, scompare all'improvviso. L'agente federale Teddy Daniels, affiancato dall'ufficiale Chuck Aule, deve indagare per risolvere il mistero.</p>
-      <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
-    </div>
-  </div>
-</div>
-</div>
-<div class = "colore">
-<div style="height:30px"></div>
+    		<a href="Registration.jsp" class="btn btn-secondary">Registrati</a>
+		
+		 <h1 class="titolo-cover">The social network for film lovers.</h1>
+	 </section>
 
+	 <!-- card grid -->
+	 <div class="py-5">
+    <div class="container">
+      <div class="row hidden-md-up">
+        <div class="col-md-4">
+          <div class="card">
+						<img class="card-img-top" src="../locandine/glass locandina.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Glass</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              <a href="#" class="card-link">link</a>
+              <a href="#" class="card-link">Second link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+						<img class="card-img-top" src="../locandine/suspiria locandina.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Suspiria</h4>
+              <h6 class="card-subtitle text-muted">DONA LA TUA ANIMA ALLA DANZA</h6>
+              <p class="card-text p-y-1">Un'oscurità turbina al centro di una compagnia di danza di fama mondiale, che inghiottirà il direttore artistico della troupe,
+								un'ambiziosa giovane ballerina e una dolorosa psicoterapeuta. Alcuni soccomberanno all'incubo, altri finalmente si sveglieranno.</p>
+              <a href="#" class="card-link">link</a>
+              <a href="#" class="card-link">Second link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+						<img class="card-img-top" src="../locandine/bohemianrhapsody locandina.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Bohemian Rapsody</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              <a href="#" class="card-link">link</a>
+              <a href="#" class="card-link">Second link</a>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+						<img class="card-img-top" src="../locandine/roma locandina.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Roma</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              <a href="#" class="card-link">link</a>
+              <a href="#" class="card-link">Second link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+						<img class="card-img-top" src="../locandine/a-star-is-born locandina.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">A Star is Born</h4>
+              <h6 class="card-subtitle text-muted"></h6>
+              <p class="card-text p-y-1">Il musicista esperto Jackson Maine scopre e si innamora di Ally,
+								l'artista in difficoltà. Ha appena rinunciato al suo sogno di diventare grande come cantante, fino a quando Jack non la persuaderà sotto i riflettori.
+								Ma anche quando la carriera di Ally decolla,il lato personale della loro relazione sta crollando,
+								mentre Jack combatte una battaglia in corso con i suoi demoni interni.</p>
+              <a href="#" class="card-link">link</a>
+              <a href="#" class="card-link">Second link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+						<img class="card-img-top" src="../locandine/aquaman locandina.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Aquaman</h4>
+              <h6 class="card-subtitle text-muted">PROTETTORE DEL PROFONDO</h6>
+              <p class="card-text p-y-1">Arthur Curry viene a sapere che è l'erede del regno sottomarino di Atlantide
+								e deve farsi avanti per guidare il suo popolo ed essere un eroe per il mondo.</p>
+              <a href="#" class="card-link">link</a>
+              <a href="#" class="card-link">Second link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- card grid -->
 	<%@ include file="Footer.jsp"%>
-	</div>
 </body>
 </html>

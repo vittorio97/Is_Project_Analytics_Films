@@ -3,82 +3,82 @@
 * { margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; }
 /* CSS Header */
 
-
-header{
-	
-	background-color:white;
+/* searchbar*/
+.form-inline{
+  position: absolute;
+  left: 520px;
+  top: 35px;
 }
-
-center img{
-	
-	max-heidth: 200px;
+.btn-outline-success {
+    color: #333;
+    border-color: #333;
 }
-
-.colorb{
-	overflow: hidden;
-	background-color:grey;
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #f9bc51;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(222,170,12,.5);
 }
-
-
-.logo {
-	
-	max-heidth: 200px;
-	background-color:white;
-	background:url(img/LOGO.jpg) center no-repeat;
-
-}
-
-
-.contHome{
-	display: flex;
-  		background-color: grey;
-}
-
-
-.search{
-	margin-left: 70%;
-	
-}
-
+/* searchbar*/
+/*login*/
 .flex-form-container{
-	display: flex;
-	background-color: grey;
+  position: absolute;
+  right: 70px;
+  bottom: 20px;
+}
+.btn-warning {
+    color: #212529;
+    background-color: #f9bc51;
+    border-color: #ffc107;
+}
+/*login*/
+.navbar.navbar-light{
+
+  background-color: #FFF
+}
+/* CSS BODY */
+#cover {
+  background:url("../img/spider-man-into-spider-verse.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 580px;
+  padding-bottom: 80px;
+  text-align: center;
+  max-height: 50px;
 }
 
-.login{
-	form {
-  	display: block;
-  	margin-top: 0em;
+.titolo-cover{
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffc107;
+}
+
+.navbar.navbar-light{
+
+  background-color: #FFF
 }
 
 
-
-
-.card-group{
-	
-	display: flex;
-	background-color: grey;
-}
-
-	
+/*CSS BODY*/
 
 /* CSS FOOTER*/
 .footer{
-	position: static;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    background-color: grey ;
-    color:#ffffff;
-    font-size:medium;
-    margin-top:0;
+	
+  background: #333;
+  padding:30px;
+  color:#fff;
+  margin-top:40px;
+  position:relative;
+  margin-top: -100px;
+  clear:both;
+
 }
 
 .colore{
-	background-color: grey;
+	background-color: white;
 }
 
 

@@ -4,13 +4,49 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
+<link href="../css/CinemaList.css" type="text/css" rel="stylesheet" />
+<title>Lista Cinema</title>
 </head>
 <body>
 <%@ include file= "HeaderSito.jsp"%>
 
+<div id="container">
+ 
+ <div id="main"><h1>Lista Cinema </h1>
+  <br>
+  <p>The Space Cinema, Nola</p>
+  <p> orari di programmazione: </p>
+  <p> lunedì/martedì/venerdì 20:45 </p>
+  <br>
+  <hr noshade class="line">
+  <br>
+  <p>Movie Planet, San Giuliano</p>
+  <p> orari di programmazione: </p>
+  <p> lunedì/martedì/venerdì 20:45 </p>
+  <br>
+  <hr noshade class="line">
+  <br>
+  <p>The Space Cinema, Salerno</p>
+  <p> orari di programmazione: </p>
+  <p> lunedì/martedì/venerdì 20:45 </p>
+  <br>
+  <hr noshade class="line">
+  <br>
+  <p>The Space Cinema, Salerno</p>
+  <p> orari di programmazione: </p>
+  <p> lunedì/martedì/venerdì 20:45 </p>
+  <br>
+  <hr noshade class="line">
+  <br>
+  <p>Movie Planet, San Giuliano</p>
+  <p> orari di programmazione: </p>
+  <p> lunedì/martedì/venerdì 20:45 </p></div>
+  
 
+</div>
 
+</section>
 <%@ include file="Footer.jsp"%>
 </body>
 </html>
