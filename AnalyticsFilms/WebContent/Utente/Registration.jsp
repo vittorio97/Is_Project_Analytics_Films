@@ -14,27 +14,29 @@
 <%@ include file= "HeaderSito.jsp"%>
 
 <center>
-<form class = "formReg" style= "width: 30%  ; margin-top: 10% ; margin-bottom: 6.5%">
+<form class ="reg" action = "../Registration"  method= "post"  
+
+	style= "width: 30%  ; margin-top: 10% ; margin-bottom: 6.5%">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="text" class="form-control" name="email">
     
   </div>
   
   <div class="form-group">
     <label for="exampleInputEmail1">Username</label>
-    <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+    <input type="text" class="form-control" name= "username" placeholder="Enter username">
     
   </div>
   
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" name="password" placeholder="Password">
   </div>
   
   <div class="form-group">
     <label for="exampleInputPassword1">Repeat Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="RepeatPassword">
+    <input type="password" class="form-control" name="repeatPassword" placeholder="RepeatPassword">
   </div>
   
   <div class="form-check">

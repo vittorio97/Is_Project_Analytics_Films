@@ -33,7 +33,9 @@ public class Registration extends HttpServlet {
        
 
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
 	String email = request.getParameter("email");
+	
 	String username= request.getParameter("username");
 	
 	String password = request.getParameter("password");
@@ -48,9 +50,9 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	
  
 try {
-	System.out.println("premanager");
+	
 		manager.add(user);
-		System.out.println("postmanager");
+		
 		response.sendRedirect("Utente/Homepage.jsp");
 
 } catch (SQLException e) {

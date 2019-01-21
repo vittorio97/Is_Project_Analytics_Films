@@ -5,13 +5,14 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
-	<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
+	<link href="css/HomePageStyle.css" type="text/css" rel="stylesheet" />
 	<title>AnalyticsFilms</title>
 </head>
 	
 <body>
    
-	<%@ include file= "Header.jsp"%> 
+	
+	<%@ include file= "Header.jsp"%>
 	
 	<section id="cover">
 		

@@ -64,11 +64,11 @@ import connectionPool.ConnectionPool;
 			
 			try{
 				pstmt = con.prepareStatement(NEW_USER);
-				System.out.println(u.getEmail());
+				
 				pstmt.setString(1, u.getEmail());
 				pstmt.setString(2, u.getUsername());
 				pstmt.setString(3, u.getPassword());
-				pstmt.setString(4,"Utente");
+				pstmt.setString(4,"Utente registrato");
 			
 				int reg = pstmt.executeUpdate();
 				
