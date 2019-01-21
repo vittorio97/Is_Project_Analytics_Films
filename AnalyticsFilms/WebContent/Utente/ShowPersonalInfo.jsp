@@ -5,12 +5,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+		<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
+		<link href="../css/ShowPersonal
+		Info.css" type="text/css" rel="stylesheet" />
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
 </head>
 <body>
 <%@ include file= "HeaderSito.jsp"%>
 
-
-
+<img class="UserLogo"src="../img/user.png" width="125px" height="125px">
+<div id="container">
+		<div id="main">
+	
+  <div class="UsernameEmail">
+	<h3>Username:</h3>
+	<h5>Email:</h5>
+    </div>
+		
+</div>
+</div>
 <%@ include file="Footer.jsp"%>
 </body>
 </html>

@@ -35,8 +35,10 @@
 					<form action="Login" method="post">
 						Email: <input type="text" name="email">
 						Password: <input type="password" name="password"><br>
-							<a href= "RecovePassword.jsp" > Forgot password? </a>
+							<div class="ForgotPassword">
+							<a href= "RecovePassword.jsp"  > Forgot password? </a>
 							<input class="btn btn-warning my-1 " type="submit" value="Submit">
+								</div>
 								</form>
 									</form>
 								</div>

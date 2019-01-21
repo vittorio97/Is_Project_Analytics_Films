@@ -14,8 +14,7 @@
 <body>
 <%@ include file= "HeaderSito.jsp"%>
 	<div id="container">
-		<div
-		 id="main">
+		<div id="main">
 	 <img class= "UserLogo" src="../img/user.png" width="125px" height="125px">
  <form class = "formReg" style= "width: 30%  ; margin-top: 6.5% ; margin-bottom: 6.5%" >
   <div class="form-group"> </div>

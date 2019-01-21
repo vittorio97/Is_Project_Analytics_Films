@@ -6,7 +6,7 @@
 /* searchbar*/
 .form-inline{
   position: absolute;
-  left: 520px;
+  left: 450px;
   top: 35px;
 }
 .btn-outline-success {
@@ -24,8 +24,8 @@
 /*login*/
 .flex-form-container{
   position: absolute;
-  right: 70px;
-  bottom: 20px;
+  right: 75px;
+  bottom: 50px;
 }
 .btn-warning {
     color: #212529;
@@ -36,6 +36,11 @@
 .navbar.navbar-light{
 
   background-color: #FFF
+}
+.ForgotPassword{
+	position: absolute;
+	right: 45px;
+	top: 25px;
 }
 /* CSS BODY */
 #cover {
