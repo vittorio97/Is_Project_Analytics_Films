@@ -1,0 +1,36 @@
+*{
+	margin : 0;
+	padding: 0;
+
+}
+
+html, body{
+	
+	height: 100%;
+	
+}
+
+#main{
+	
+	overflow: auto;
+	
+}
+
+#container{
+	
+	min-height: 100%;
+	
+}
+
+.formReg {
+	position: absolute;
+	left: 550px;
+	
+}
+.UserLogo{
+	position: absolute;
+	top: 270px;
+	left: 350px;
+	
+	
+}
