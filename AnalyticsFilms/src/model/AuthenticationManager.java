@@ -3,6 +3,7 @@ package model;
 
 import java.sql.Connection;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -58,7 +59,7 @@ import connectionPool.ConnectionPool;
 		 public boolean add(Utente u) throws SQLException {
 			
 			Connection con = ConnectionPool.getConnection();
-			System.out.println(con);
+			
 			PreparedStatement pstmt = null;
 			boolean registrator = false;
 			

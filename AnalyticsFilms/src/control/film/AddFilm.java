@@ -33,8 +33,7 @@ public class AddFilm extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String TitoloFilm, Trama, Locandina, Categoria;
 		
-		ArrayList <Film> films= new ArrayList<Film>();
-		
+			
 		TitoloFilm= request.getParameter("TitoloFilm");
 		Trama= request.getParameter("Trama");
 		Locandina= request.getParameter("Locandina");
@@ -50,8 +49,8 @@ public class AddFilm extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		RequestDispatcher dispatcher= request.getRequestDispatcher("FilmListAmministrator.jsp");
-		dispatcher.forward(request, response);
+	
+			response.sendRedirect("Amministratore/FilmList.jsp");
 	}
 
 	/**

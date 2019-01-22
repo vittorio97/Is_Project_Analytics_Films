@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Permette il Logout
  */
-@WebServlet("/LogoutServlet")
+@WebServlet("/logout")
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,11 +27,10 @@ public class Logout extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();  
-        session.invalidate();  
-        
-		request.getRequestDispatcher("HomePage.jsp").forward(request, response);		
-
+        System.out.println("Prima di invalidate");
+		request.getSession().invalidate();
+		response.sendRedirect("Utente/Homepage.jsp");		
+		System.out.println("Dopo invalidate");
 	}
 
 	/**

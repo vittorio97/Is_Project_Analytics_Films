@@ -58,7 +58,7 @@ public class Login extends HttpServlet {
 		}
 		if(user.getRuolo().equals("Utente registrato")){
 			
-			response.sendRedirect("Utente/MyPersonalUser.jsp");
+			response.sendRedirect("Utente/HomePageLog.jsp");
 		}
 		}
 		else{
