@@ -2,38 +2,37 @@ package model;
 
 
 	import java.sql.Connection;
+
 	import java.sql.PreparedStatement;
 	import java.sql.ResultSet;
 	import java.sql.SQLException;
 
-	import bean.Statistiche;
-	import utils.DBConnection;
+	import bean.Film;
+	import bean.Utente;
+	import bean.Recensione;
+	
+	import connectionPool.ConnectionPool;
 
 	/**
-	 * Classe dao per il calcolo delle statistiche dal database
+	 * Classe il calcolo delle statistiche dal database
 	 * @author Vittorio
 	 */
-	 public class StatisticsManager {
- {
+	 
+	
+	public class StatisticsManager {
 
-		public StatisticheDAO() {}
 		
-		/**
-		 * Calcola le statistiche di sistema basandosi sui dati presenti nel databse
-		 * @return Statistiche: {@link Statistiche}
-		 * @throws SQLException
-		 */
-		public static Statistiche doCalculate() throws SQLException {
+		public static boolean statistics() throws SQLException {
 			
-			Connection con = null;
-			PreparedStatement pstmt = null;
-			ResultSet rs;
+			Connection con = ConnectionPool.getConnection();
+			PreparedStatement pstmt = null;		
+			boolean registrator = false;
+	
 			
-			con = DBConnection.getConnection();
+			//numero film in elenco 
+			pstmt = con.prepareStatement(NUMBER_FILM);
+			int rs = pstmt.executeQuery();
 			
-			//numero prodotti venduti
-			pstmt = con.prepareStatement(N_PROD_SOLD_LAST_MONTH);
-			rs = pstmt.executeQuery();
 			
 			int nProdottiVenduti = 0;
 			if (rs.next())
@@ -65,32 +64,17 @@ package model;
 				System.err.println("divisione per 0");
 			}
 			
-			//guadagni ultimo mese
-			pstmt = con.prepareStatement(EARNINGS_LAST_MONTH);
-			rs = pstmt.executeQuery();
 			
-			float guadagniUltimoMese = 0f;
-			if (rs.next())
-				guadagniUltimoMese = rs.getFloat(1);
-				
-			//
-			Statistiche stats = new Statistiche(
-					nProdottiCatalogo, 
-					nProdottiVenduti, 
-					nUtentiRegistrati, 
-					guadagniUltimoMese, 
-					avgOrdiniUtente)
+		
 			; 
 			
 			return stats;
 		}
+
 		
-		//-- query:
-		//private static final String N_PRODOTTI_VENDUTI = "SELECT COUNT(*) FROM dettagliordine";
-		private static final String N_PROD_SOLD_LAST_MONTH = "select count(*) from dettagliordine d inner join (SELECT o.idOrdine as id FROM ordine o WHERE (o.DataAcquisto >= (NOW() - INTERVAL 1 MONTH))) t on d.ordine = t.id";
-		private static final String N_PRODOTTI_CATALOGO = "SELECT COUNT(*) FROM prodotto";
-		private static final String N_UTENTI_REGISTRATI = "SELECT COUNT(*) FROM utente u WHERE u.Email NOT IN (SELECT a.Email FROM amministratore a)";
-		private static final String EARNINGS_LAST_MONTH = "SELECT SUM(o.Prezzo) FROM ordine o WHERE (o.DataAcquisto >= (NOW() - INTERVAL 1 MONTH))";
+		private static final String NUMBER_FILM = "SELECT COUNT(*) FROM Film";
+		private static final String NUMBER_USER = "SELECT COUNT(*) FROM Utente";
+		private static final String NUMBER_REVIEW = "SELECT COUNT(*) FROM Recensioni";
 	}
 	
 }

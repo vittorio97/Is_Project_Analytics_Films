@@ -27,10 +27,10 @@ public class Logout extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("Prima di invalidate");
+       
 		request.getSession().invalidate();
 		response.sendRedirect("Utente/Homepage.jsp");		
-		System.out.println("Dopo invalidate");
+		
 	}
 
 	/**

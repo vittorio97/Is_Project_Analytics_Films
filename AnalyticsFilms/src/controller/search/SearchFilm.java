@@ -58,6 +58,3 @@ package controller.search;
 		}
 
 	}
-
-
-

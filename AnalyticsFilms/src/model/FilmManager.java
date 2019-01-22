@@ -20,7 +20,8 @@ public class FilmManager {
  * @throws SQLException
  */
 	public static boolean AddFilm(Film film) throws SQLException
-		{
+	
+	{
 			Connection con = ConnectionPool.getConnection();
 			PreparedStatement pstmt = null;		
 			boolean registrator = false;
