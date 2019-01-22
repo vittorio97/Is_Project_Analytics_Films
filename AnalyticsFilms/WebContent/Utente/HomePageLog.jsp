@@ -14,7 +14,7 @@
 <body>
    
 	
-<%@ include file= "HeaderSito.jsp"%> 
+<%@ include file= "HeaderLoggatoHomepage.jsp"%> 
 	
 	<section id="cover">
 		

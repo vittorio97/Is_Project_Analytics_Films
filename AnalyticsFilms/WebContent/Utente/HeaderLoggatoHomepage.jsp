@@ -1,6 +1,8 @@
 <%@ page import= "bean.Utente" %>
 
 <% Utente u = (Utente)request.getSession().getAttribute("user"); %>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
@@ -34,7 +36,7 @@
 			 <ul class="navbar-nav ml-auto">
 				 <!-- SIGN IN -->
 				<div class = "flex-form-container">
-			
+				
 				<form class="logout" action="../logout" method="post">
 						
 							

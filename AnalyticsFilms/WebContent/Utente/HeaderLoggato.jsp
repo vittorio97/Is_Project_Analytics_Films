@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Pagina personale Amministratore</title>
+<title>Insert title here</title>
 </head>
 <body>
- 	<h> Pagina personale Amministratore </h>
+
 </body>
 </html>
