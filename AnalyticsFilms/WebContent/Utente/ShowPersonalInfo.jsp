@@ -4,18 +4,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Visualizza info personali</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-		<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
+	<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
 		<link href="../css/ShowPersonal
 		Info.css" type="text/css" rel="stylesheet" />
-		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+			
 </head>
 <body>
 <%@ include file= "HeaderSito.jsp"%>
 
-<img class="UserLogo"src="../img/user.png" width="125px" height="125px">
+
+	<section id="cover">
+		
+		 
+	 </section>
+
+
+ <img class="UserLogo"src="../img/user.png" width="150px" height="150px">
 <div id="container">
 		<div id="main">
 	
@@ -25,7 +33,7 @@
     </div>
 		
 </div>
-</div>
+</div> 
 <%@ include file="Footer.jsp"%>
 </body>
 </html>
