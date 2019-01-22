@@ -37,16 +37,34 @@ public class Login extends HttpServlet {
 		String email= request.getParameter("email");
 		String password= request.getParameter("password");
 		
-		Utente utente=null;
+		Utente user=null;
 		try {
-			utente = managerLogin.login(email, password);
+			user = managerLogin.login(email, password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		request.getSession().setAttribute("utente", utente);
-		response.sendRedirect("Utente/MyPersonalUser.jsp");
+		
+		if(user!=null){
+			
+		request.getSession().setAttribute("utente", user);
+		
+		
+		if(user.getRuolo().equals("Amministratore")){
+			
+			response.sendRedirect("Amministratore/MyPersonalAmministrator.jsp");
+			
+		}
+		if(user.getRuolo().equals("Utente registrato")){
+			
+			response.sendRedirect("Utente/MyPersonalUser.jsp");
+		}
+		}
+		else{
+			response.sendRedirect("Utente/Homepage.jsp");
+		}
+		
 	}
 
 	/**

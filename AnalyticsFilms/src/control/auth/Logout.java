@@ -6,11 +6,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Logout
+ * Permette il Logout
  */
-@WebServlet("/Logout")
+@WebServlet("/LogoutServlet")
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,10 +27,11 @@ public class Logout extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getSession().removeAttribute("admin");
-		request.getSession().invalidate();
-		
-		response.sendRedirect("Home.jsp");
+        HttpSession session = request.getSession();  
+        session.invalidate();  
+        
+		request.getRequestDispatcher("HomePage.jsp").forward(request, response);		
+
 	}
 
 	/**
@@ -41,3 +43,4 @@ public class Logout extends HttpServlet {
 	}
 
 }
+

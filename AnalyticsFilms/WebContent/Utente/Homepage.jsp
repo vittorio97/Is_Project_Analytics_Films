@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 <body>
    
 	
-	<%@ include file= "Header.jsp"%>
+<%@ include file= "Header.jsp"%> 
 	
 	<section id="cover">
 		

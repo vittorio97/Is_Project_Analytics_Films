@@ -32,7 +32,8 @@ import connectionPool.ConnectionPool;
 				while(rs.next()) {
 					utente= new Utente();
 					utente.setEmail(rs.getString("email"));
-					
+					utente.setUsername(rs.getString("username"));
+					utente.setRuolo(rs.getString("ruolo"));
 					
 				
 				}

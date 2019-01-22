@@ -1,3 +1,8 @@
+<%@ page import= "bean.Utente" %>
+
+<% Utente u = (Utente)request.getSession().getAttribute("user"); %>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
@@ -31,8 +36,8 @@
 			 <ul class="navbar-nav ml-auto">
 				 <!-- SIGN IN -->
 				<div class = "flex-form-container">
-				<form class= "login">
-					<form action="Login" method="post">
+				
+				<form class="login" action="../login" method="post">
 						Email: <input type="text" name="email">
 						Password: <input type="password" name="password"><br>
 							<div class="ForgotPassword">
