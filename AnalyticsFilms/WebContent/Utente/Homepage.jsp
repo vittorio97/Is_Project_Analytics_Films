@@ -13,7 +13,7 @@
 <body>
    
 	
-<%@ include file= "Header.jsp"%> 
+<%@ include file= "HeaderHomePage.jsp"%> 
 	
 	<section id="cover">
 		
