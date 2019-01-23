@@ -36,18 +36,18 @@ package controller.search;
 		 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 		 */
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			String titolo= request.getParameter("titoloFilm");
+			String titolo= request.getParameter("TitoloFilm");
 			Collection <Film> films =null;
+			
 			try {
 				films = manager.search(titolo);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			request.getSession().setAttribute("films", films);
 			
-			RequestDispatcher dispatcher= request.getRequestDispatcher("FilmList.jsp");
-			dispatcher.forward(request, response);
+			
+			response.sendRedirect("Amministratore/FilmListAmministrator.jsp");
 		}
 
 		/**

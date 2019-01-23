@@ -27,7 +27,7 @@ public class SearchManager {
      
     public static Film searchByTitolo(String TitoloFilm) throws SQLException
     {
-       
+    	Film film = new Film();
         Connection con = null;
         PreparedStatement pstmt = null;
         con = ConnectionPool.getConnection();
@@ -45,18 +45,12 @@ public class SearchManager {
            
     }
       
-    /**
-     * Effettua la ricerca dei prodotti.
-     * @param query: query di ricerca immessa dall'utente
-     * @return ArrayList<Prodotto>: una lista di prodotti
-     * @throws SQLException
-     * @author Vittorio
-     */
-    public static ArrayList<Prodotto> search(String query) throws SQLException{
+   
+    public static Collection <Film> search() throws SQLException{
        
         Connection con = null;
         PreparedStatement pstmt = null;
-        con = DBConnection.getConnection();
+        con = ConnectionPool.getConnection();
        
         pstmt = con.prepareStatement(RETRIVE_ALL);
        
@@ -96,17 +90,8 @@ public class SearchManager {
         return prodotti;
     }
     
-    private static final String SEARCH_FILM_BY_TITOLO = "SELECT * FROM prodotto WHERE TitoloFilm = ?";
-    private static final String DO_UPDATE= "UPDATE Prodotto SET Nome = ?, Produttore = ?, Piattaforma= ? , Genere= ? , Descrizione= ? , Immagini= ?, Prezzo= ? , Disponibilita= ?, DataUscita= ?, numVenduti= ?, linkVideo= ? WHERE idProdotto = ?";
-    private static final String RICERCA_DA_MENU_CONSOLE = "SELECT * FROM Prodotto WHERE Disponibilita>=0 AND (Nome LIKE ? OR Nome LIKE ? OR Nome LIKE ?"
-            + "AND Genere = ?)";
-    private static final String RICERCA_DA_MENU_NAV = "SELECT * FROM Prodotto WHERE Disponibilita>=0 AND (Produttore LIKE ? OR Produttore LIKE ? OR Produttore LIKE ?"
-            + "OR Piattaforma LIKE ? OR Piattaforma = ? )";
-    private static final String RICERCA_DA_MENU_GIOCHI = "SELECT * FROM Prodotto WHERE Disponibilita>=0 AND (Piattaforma LIKE ? OR Piattaforma LIKE ? OR Piattaforma LIKE ?)";
-    private static final String PIU_VENDUTI = "SELECT * FROM Prodotto WHERE Disponibilita>=0 ORDER BY numVenduti DESC LIMIT 0,5";
-    private static final String ULTIMI_ARRIVI = "SELECT * FROM Prodotto WHERE Disponibilita>=0 ORDER BY DataUscita DESC LIMIT 0,5";
-    private static final String DO_SAVE ="INSERT INTO Prodotto(Nome, Produttore, Piattaforma, Genere, Descrizione, Immagini, Prezzo, Disponibilita, DataUscita, numVenduti, linkVideo) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-    private static final String UPDATE_QUANTITY="UPDATE Prodotto SET Disponibilita = ?, numVenduti = ? WHERE idProdotto = ?";
-    private static final String REMOVE_PRODUCT="UPDATE Prodotto SET Disponibilita = ? WHERE idProdotto = ?";
-    private static final String RETRIVE_ALL = "SELECT * FROM prodotto p WHERE Disponibilita>=0";
+    private static final String SEARCH_FILM_BY_TITOLO = "SELECT * FROM Film WHERE TitoloFilm = ?";
+    private static final String GET_FILM= "SELECT * FROM Film";
+    
+
 }
