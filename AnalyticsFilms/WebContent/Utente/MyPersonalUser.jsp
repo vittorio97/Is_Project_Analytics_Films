@@ -17,7 +17,7 @@
 <title>MyPersonalUser</title>
 </head>
 <body>
-<%@ include file= "HeaderSito.jsp"%>
+<%@ include file= "HeaderLoggato.jsp"%>
 
 		<section id="profile-header">
 
