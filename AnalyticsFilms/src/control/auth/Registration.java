@@ -36,6 +36,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	
 	String email = request.getParameter("email");
 	
+		
 	String username= request.getParameter("username");
 	
 	String password = request.getParameter("password");

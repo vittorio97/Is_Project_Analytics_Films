@@ -26,7 +26,7 @@ import connectionPool.ConnectionPool;
 				
 				pstmt.setString(1, r.getTitolo());
 				pstmt.setString(2, r.getTesto());
-				pstmt.setDate(3, r.getData());
+				
 				
 			
 				int reg = pstmt.executeUpdate();
@@ -56,7 +56,7 @@ import connectionPool.ConnectionPool;
 		
 		
 		
-		private static final String INSERT_REVIEW = "INSERT INTO Recensione(Titolo,Testo,Date) VALUES (?,?,?)";
+		private static final String INSERT_REVIEW = "INSERT INTO Recensione(Titolo,Testo) VALUES (?,?,?)";
 		
 	
 	}

@@ -33,16 +33,16 @@ public class InsertReview extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String Titolo,Testo;
-		Date date;
+		
 		
 		
 		Titolo = request.getParameter("Titolo");
 		Testo = request.getParameter("Testo");
-		date = request.getParameter("fff");
+		
 				
 		
 		
-		Recensione recensione= new Recensione (Titolo,Testo,Date) ;
+		Recensione recensione= new Recensione (Titolo,Testo) ;
 		
 
 		try {
