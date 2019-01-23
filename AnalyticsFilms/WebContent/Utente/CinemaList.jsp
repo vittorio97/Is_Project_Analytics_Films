@@ -9,11 +9,12 @@
 <title>Lista Cinema</title>
 </head>
 <body>
-<%@ include file= "HeaderSito.jsp"%>
+<%@ include file= "HeaderNoLog.jsp"%>
 
 <div id="container">
+ <div id="main">
  
- <div id="main"><h1>Lista Cinema </h1>
+ <h1>Lista Cinema </h1>
   <br>
   <p>The Space Cinema, Nola</p>
   <p> orari di programmazione: </p>
@@ -41,12 +42,10 @@
   <br>
   <p>Movie Planet, San Giuliano</p>
   <p> orari di programmazione: </p>
-  <p> lunedì/martedì/venerdì 20:45 </p></div>
-  
+  <p> lunedì/martedì/venerdì 20:45 </p>
 
+ </div>
 </div>
 
-</section>
-<%@ include file="Footer.jsp"%>
 </body>
 </html>

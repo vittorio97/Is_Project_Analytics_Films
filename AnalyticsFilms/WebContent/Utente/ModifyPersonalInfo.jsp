@@ -12,7 +12,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
 </head>
 <body>
-<%@ include file= "HeaderSito.jsp"%>
+<%@ include file= "HeaderLoggato.jsp"%>
 	<div id="container">
 		<div id="main">
 	 <img class= "UserLogo" src="../img/user.png" width="125px" height="125px">
@@ -40,7 +40,7 @@
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="RepeatNewPassword">
   </div>
   
-  <button type="submit"  class="btn btn-primary">Confirm Changes</button>
+  <button type="submit"  class="btn btn-warning">Confirm Changes</button>
 	</form>
 	
 	</div>

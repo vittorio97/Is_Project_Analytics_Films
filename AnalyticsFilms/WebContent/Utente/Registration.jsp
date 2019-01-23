@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<%@ include file= "HeaderHomePage.jsp"%>
+<%@ include file= "HeaderNoLog.jsp"%>
 
 <center>
 <form class ="reg" action = "../Registration"  method= "post"  

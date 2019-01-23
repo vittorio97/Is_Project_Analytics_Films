@@ -85,8 +85,8 @@
               <h6 class="card-subtitle text-muted"></h6>
               <p class="card-text p-y-1">Il musicista esperto Jackson Maine scopre e si innamora di Ally,
 								l'artista in difficoltà. Ha appena rinunciato al suo sogno di diventare grande come cantante, fino a quando Jack non la persuaderà sotto i riflettori.
-								Ma anche quando la carriera di Ally decolla,il lato personale della loro relazione sta crollando,
-								mentre Jack combatte una battaglia in corso con i suoi demoni interni.</p>
+								Ma anche quando la carriera di Ally decolla,il lato personale della loro relazione sta crollando.
+								</p>
               <a href="#" class="card-link">link</a>
               <a href="#" class="card-link">Second link</a>
             </div>

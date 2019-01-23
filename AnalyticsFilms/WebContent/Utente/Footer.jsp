@@ -13,7 +13,9 @@
 <body>
 
 <footer class="footer">
-	<p> Copyright </p>
+	<p> Copyright 
+	<i class="fa fa-angle-double-right"> </i> AnalyticsFilms©</p> 
+	
 </footer>
 
 </body>

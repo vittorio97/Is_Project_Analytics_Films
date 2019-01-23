@@ -11,19 +11,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file= "HeaderSito.jsp"%>
 
+<%@ include file= "HeaderNoLog.jsp"%> 
 
-<center>
-<form class = "formReg" style= "width: 30%  ; margin-top: 10% ; margin-bottom: 6.5%">
-  <div class="form-group">
+ <div id="container">
+<div id="main">
+	
+  <form class = "formReg" >
   <h3> LOST PASSWORD? </h3> 
   <p>Ok, don't panic. You can recover it here</p>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" class="form-control" placeholder="Enter email">
     	<label>The password will be sent to the indicated email</label>
-    	<center></center><button class="btn btn-warning my-2 my-sm-0" type="submit">Submit</button></center>
-  </div>
+    	<button class="btn btn-warning my-2 my-sm-0" type="submit">Submit</button>
+  </form>
+</div>
+</div> 
 
 <%@ include file="Footer.jsp"%>
+
 </body>
 </html>
