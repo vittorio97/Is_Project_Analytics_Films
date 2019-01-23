@@ -21,26 +21,22 @@ import connectionPool.ConnectionPool;
 public class SearchManager {
 	
 
-    /**
-     * recupera un film a partire dal suo TitoloFilm
-     * @param TitoloFilm: TitoloFilm del film da recuperare
-     * @return Film: {@link Film}
-     * @throws SQLException
-     */
+  
+    /* recupera un film a partire dal suo TitoloFilm*/
+    
+     
     public static Film searchByTitolo(String TitoloFilm) throws SQLException
     {
-        String sql = "SELECT * FROM prodotto WHERE TitoloFilm = ?";
+       
         Connection con = null;
         PreparedStatement pstmt = null;
         con = ConnectionPool.getConnection();
        
-        pstmt = con.prepareStatement(sql);
+        pstmt = con.prepareStatement(SEARCH_FILM_BY_TITOLO);
         pstmt.setString(1, TitoloFilm);
         ResultSet rs = pstmt.executeQuery();
         
-       
-        Film film = converti(rs);
-        
+          
         rs.close();
         pstmt.close();
         con.close();       
@@ -99,6 +95,8 @@ public class SearchManager {
        
         return prodotti;
     }
+    
+    private static final String SEARCH_FILM_BY_TITOLO = "SELECT * FROM prodotto WHERE TitoloFilm = ?";
     private static final String DO_UPDATE= "UPDATE Prodotto SET Nome = ?, Produttore = ?, Piattaforma= ? , Genere= ? , Descrizione= ? , Immagini= ?, Prezzo= ? , Disponibilita= ?, DataUscita= ?, numVenduti= ?, linkVideo= ? WHERE idProdotto = ?";
     private static final String RICERCA_DA_MENU_CONSOLE = "SELECT * FROM Prodotto WHERE Disponibilita>=0 AND (Nome LIKE ? OR Nome LIKE ? OR Nome LIKE ?"
             + "AND Genere = ?)";
