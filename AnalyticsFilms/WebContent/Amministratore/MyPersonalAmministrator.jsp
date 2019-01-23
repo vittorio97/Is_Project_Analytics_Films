@@ -8,5 +8,20 @@
 </head>
 <body>
  	<h> Pagina personale Amministratore </h>
+ 	
+ 	<h1> Amministrator Info</h1>
+ 		<hr>
+ 		<br>
+ 		<br>
+ 		<h3> Username </h3>
+ 		<img src="../img/user.png" >
+ 		
+ 		<h3> Email: </h3>
+ 		<textarea name="testo" rows="2" cols="40" > </textarea>
+ 		
+ 		<h3> Role </h3>
+ 		<textarea name="ruolo" rows="2" cols="40" >
+ 		</textarea>
+ 		
 </body>
 </html>

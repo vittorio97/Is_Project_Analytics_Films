@@ -67,5 +67,6 @@ style="
 position:absolute;
 left:800px;
 bottom:1px;"> Aggiungi </button>
+
 </body>
 </html>

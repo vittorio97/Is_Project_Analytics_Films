@@ -10,9 +10,55 @@
 <title>MyPersonalUser</title>
 </head>
 <body>
-<%@ include file= "HeaderSito.jsp/.."%>
-
-
-<%@ include file="Footer.jsp"%>
+	<h3> User list</h3>
+	<hr>
+	
+	<ul>
+	<li style="position:absolute;
+				bottom:550px"> Username 1 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 500px;"> Username 2 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 450px;"> Username 3 <button> Elimina </button> <button> Modifica </button></li>
+    <li style="
+    position: absolute;
+    bottom: 400px;
+	"> Username 4 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 350px;
+	"> Username 5 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 300px;
+	"> Username 6 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 250px;
+	"> Username 7<button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 200px;
+	"> Username 8 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 150px;
+	"> Username 9 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 100px;
+	"> Username 10 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 50px;
+	"> Username 11 <button> Elimina </button> <button> Modifica </button></li>
+	<li style="
+    position: absolute;
+    bottom: 0px;
+	"> Username 12 <button> Elimina </button> <button> Modifica </button></li>
+	
+	</ul>
 </body>
 </html>
