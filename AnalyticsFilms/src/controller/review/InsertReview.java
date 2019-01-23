@@ -46,7 +46,7 @@ public class InsertReview extends HttpServlet {
 		
 
 		try {
-			ReviewManager.insertReview(recensione);
+			managerReview.insertReview(recensione);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

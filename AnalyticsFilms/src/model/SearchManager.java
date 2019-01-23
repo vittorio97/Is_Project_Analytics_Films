@@ -44,54 +44,10 @@ public class SearchManager {
         return film;
            
     }
-      
-   
-    public static Collection <Film> search() throws SQLException{
-       
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        con = ConnectionPool.getConnection();
-       
-        pstmt = con.prepareStatement(RETRIVE_ALL);
-       
-        //retrive products
-        //-------------------------------------------------------------------------
-        ResultSet rs = pstmt.executeQuery();
-      
-        List<Findable> list = new ArrayList<>();
-       
-        try {
-            while (rs.next()) {
-                Prodotto p = new Prodotto(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getFloat(8), rs.getInt(9), rs.getDate(10).toLocalDate(), rs.getString(12));
-                list.add(p);
-            }
- 
-        } catch (Exception e) {
-            IO.err("ERROR", e.getMessage());
-            e.printStackTrace();
-        }
-        //-------------------------------------------------------------------------
-       
-        //search
-        //-------------------------------------------------------------------------
-        SearchEngine se = SearchEngine.getInstance();
-       
-        System.out.println("searching...");
-       
-        List<Findable> risultati = se.search(query, list);
-        //-------------------------------------------------------------------------
-       
-        pstmt.close();
-        con.close();       
-       
-        ArrayList<Prodotto> prodotti = new ArrayList<>();
-        risultati.forEach((f) -> prodotti.add((Prodotto) f));
-       
-        return prodotti;
-    }
+  
     
     private static final String SEARCH_FILM_BY_TITOLO = "SELECT * FROM Film WHERE TitoloFilm = ?";
-    private static final String GET_FILM= "SELECT * FROM Film";
+    
     
 
 }

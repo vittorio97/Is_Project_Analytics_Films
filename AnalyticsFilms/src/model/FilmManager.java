@@ -2,11 +2,13 @@ package model;
 
 import java.sql.Connection;
 
+
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import bean.Film;
 import connectionPool.ConnectionPool;
@@ -100,16 +102,7 @@ try{
 return registrator;
 }
     	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    
-       
-   
+
     
     /**
       Rimuove un film dall'elenco
@@ -146,10 +139,42 @@ try{
 return registrator;
 }
 
+ 
+    
+    /**
+      Mostra elenco di tutti i film
+
+     */
+    public static Collection <Film> ShowFilmList() throws SQLException{
+        
+    	Connection con = ConnectionPool.getConnection();
+		PreparedStatement pstmt = null;		
+		ResultSet rs = null;
+		Collection <Film> film = null;
+		
+		
+
+	pstmt = con.prepareStatement(SHOW_FILM);
+	
+	rs= pstmt.executeQuery();
+	
+	while(rs.next()){
+		String titoloFilm = rs.getString("TitoloFilm");
+		String trama= rs.getString("Trama");
+		String locandina=rs.getString("Locandina");
+		String categoria=rs.getString("Categoria");
+		
+		film.add(new Film(titoloFilm,trama,locandina,categoria));
+		
+	}
+	  
+	return film;
+    }
+
 
     
  
-    
+    private static final String SHOW_FILM = "SELECT * FROM Film";
     private static final String ADD_FILM ="INSERT INTO Film(TitoloFilm,Trama,Locandina,Categoria) VALUES (?,?,?,?)";
     private static final String MODIFY_FILM= "UPDATE Film SET  Trama= ?, Categoria = ?,  WHERE TitoloFilm = ?";
     private static final String DELETE_FILM = "DELETE Film where TitoloFilm = ?";
