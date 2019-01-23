@@ -27,7 +27,6 @@ CREATE TABLE FILM (
 CREATE TABLE RECENSIONE (
 	Titolo varchar(50) primary key,
     Testo varchar(1500),
-    Data date,
     email varchar(30),
     titoloFilm varchar(30),
 

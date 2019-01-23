@@ -21,18 +21,18 @@ insert into FILM  values
 
 insert into RECENSIONE values
 ("Gradevole","Tremors è un film trash in contrasto con un epoca di trash al contrario, stabilito ciò lo si può valutare lucidamente. Tremors non è un film spocchioso che nasconde chissà quali allegorie sull'esistenza e non è un gioiello visivo fatto di pura plastica. Tremors(almeno questo capitolo) è un gradevole filmetto che paga un tributo agli anni 50 , ciò alla fine di un decennio più o meno horror legato ai teenagers. Qui cambia tutto, qui i protagonisti sono degli sbandati, solitari reietti in un deserto, spostati e derelitti, questo è il punto interessante al di là della semplice visione, un attacco(inconsapevolmente?) iconoclasta alle dicotomie di un epoca in un mix che ricorda lo scontro tra un John Wayne alcolizzato e disgraziato con il mostro della palude, e qui è il punto, riscoprire a piene mani il passato per staccarsi dai dogmi, questo è il pregio del film.
-","2015-05-03","Alina.aprea2@hotmail.it","Tremors"),
+","Alina.aprea2@hotmail.it","Tremors"),
 
 ("Drammatico e dolcissimo","Un uomo ossessionato dalla autorevolezza dittatoriale della madre,decide di vivere una vita semplice,ad un certo punto della vita riceve un dono,la figlia della sorella morta, è l'ultimo desiderio della sorella, lasciarla al fratello significa per lei farla vivere e crescere come una bambina normale,ma la piccola Mary all'età di sei sette anni si rivela una gifted, un genio in matematica così come la madre,essa non può vivere la scuola come gli altri,ma deve vivere la sua infanzia fatta di spensieratezza,e soprattuto confrontarsi con altri bambini.Ritengo questo film una grandissima testimonianza di un problema poco conosciuto,realmente vissuto nel mondo da migliaia di famiglie,la convivenza con un figlio super dotato,anche se la definizione può sembrare odiosa è l'esatta definizione che si può dare,riuscire nel trovare la giusta dimensione non è facile in quanto sia le istituzioni e i media non conoscendo il problema creano un muro di emarginazione sociale verso questi fantastici bambini,che cercano soltanto di vivere la loro vita
-","2018-07-06","Alina.aprea2@hotmail.it","Gifted"),
+","Alina.aprea2@hotmail.it","Gifted"),
 ("Deludente","Il film avrebbe dovuto essere incentrato sulla bambina particolarmente dotata, ma l'illusione dura poco. Non vengono quasi per nulla trattate le tematiche legate ai gifted children, al centro rimangono sempre i grandi e i loro grandi problemi. Alla distanza a uscire sono i soliti clichè hollywoodiani, fatti di improbabili relazioni sentimentali tra professoresse e genitori degli alunni, famiglie che si combattono nei tribunali a colpi di arringhe e odi atavici, e tate di colore pacioccose e piene di umanità.
-Musiche eccessive e attori poco convincenti completano un film che non ha saputo dare ciò che prometteva.","2018-06-08","Alberto.girotondo@libero.it","Gifted"),
+Musiche eccessive e attori poco convincenti completano un film che non ha saputo dare ciò che prometteva.","Alberto.girotondo@libero.it","Gifted"),
 
 ("Thriller psicologico di alta scuola"," Thriller di altissima scuola sfornato da un grandissimo Scorsese che si conferma uno dei migliori registi viventi. Pellicola mai banale e scontata con la quale il maestro italo-americano cerca di colpire lo spettatore con giochi psicologici e ripetuti colpi di scena, tanto da porre un punto interrogativo sul film stesso, il quale si appresta a diverse interpretazioni. Uno dei migliori film del genere; la sua visione e comprensione a 360 gradi necessitano di un attenzione ai particolari maniacale...geniale la regia che per più di un ora prende in giro lo spettatore che vede il tutto con gli occhi della pazzia, tanto da convincerlo a pensare come il pazzo al punto tale che tutto il film viene messo in discussione.
-","2017-10-10","Alberto.girotondo@libero.it","Shutter Island"),
+","Alberto.girotondo@libero.it","Shutter Island"),
 
 ("Spettacolare!","Ho atteso con impazienza la visione di questo film perché ero certo che avrei provato delle emozioni fortissime. Non mi ha delus, anzi, mi ha lasciato a bocca aperta. Sono isolano e sono cresciuto andando in barca, ma un'esperienza come quella vissuta dalla protagonista ha che dell'incredibile. Musiche, effetti speciali ed attori: tutto perfetto. Correre al cinema!
-","2018-04-01","Alberto.girotondo@libero.it","Resta con me");
+","Alberto.girotondo@libero.it","Resta con me");
 
 
   
