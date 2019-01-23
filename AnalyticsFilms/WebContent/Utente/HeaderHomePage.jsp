@@ -1,6 +1,3 @@
-<%@ page import= "bean.Utente" %>
-
-<% Utente u = (Utente)request.getSession().getAttribute("user"); %>
 
 
 <!DOCTYPE html>
