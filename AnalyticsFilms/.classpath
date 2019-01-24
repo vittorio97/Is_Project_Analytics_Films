@@ -13,5 +13,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Vittorio/Downloads/mysql-connector-java-5.1.45.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
