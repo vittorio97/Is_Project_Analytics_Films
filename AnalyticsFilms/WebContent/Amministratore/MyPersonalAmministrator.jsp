@@ -7,7 +7,6 @@
 <title>Pagina personale Amministratore</title>
 </head>
 <body>
- 	<h> Pagina personale Amministratore </h>
  	
  	<h1> Amministrator Info</h1>
  		<hr>
