@@ -8,32 +8,26 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 	
 		<link href="../css/ShowPersonalInfo.css" type="text/css" rel="stylesheet" />
-		<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
 			
 </head>
 <body>
- <%@ include file= "HeaderLoggatoHomepage.jsp"%>
+ <%@ include file= "HeaderLoggato.jsp"%>
 
-
-	<section id="cover1">
-		
-		 
-	 </section>
-
-
- <img class="UserLogo"src="../img/user.png" width="150px" height="150px">
 <div id="container">
 		<div id="main">
+		<img class="UserLogo"src="../img/user.png" width="150px" height="150px">
 	
   <div class="UsernameEmail">
 	<h3>Username:</h3>
 	<h5>Email:</h5>
+	<h5>Role:</h5>
     </div>
 		
 </div>
 </div> 
+
 <%@ include file="Footer.jsp"%>
 </body>
 </html>

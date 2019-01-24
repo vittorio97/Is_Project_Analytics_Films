@@ -12,10 +12,16 @@
 </head>
 <body>
 
-<footer class="footer">
-	<p> Copyright 
-	<i class="fa fa-angle-double-right"> </i> AnalyticsFilms©</p> 
-	
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+  <i class="fa fa-angle-double-right"> </i>
+    AnalyticsFilms 
+  </div>
+  <!-- Copyright -->
+
 </footer>
 
 </body>

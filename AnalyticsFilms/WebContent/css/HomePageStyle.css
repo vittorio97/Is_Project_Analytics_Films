@@ -70,18 +70,13 @@
 /*CSS BODY*/
 
 /* CSS FOOTER*/
-.footer{
+.page-footer{
   background: #737373;
-  padding:28px;
   color:#fff;
-  position:fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  text-align: center;
 }
 
-
+*/
 ul {
   list-style-type: none;
   margin: 0;
