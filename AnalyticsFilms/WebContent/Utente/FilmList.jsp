@@ -7,10 +7,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
 
 	<link href="css/HomePageStyle.css" type="text/css" rel="stylesheet" />
-<title>Insert title here</title>
+<title>AnalyticsFilms</title>
 </head>
 <body>
-<%@ include file= "HeaderSito.jsp"%>
+
 
 
 

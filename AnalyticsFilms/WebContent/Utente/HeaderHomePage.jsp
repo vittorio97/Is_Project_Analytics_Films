@@ -42,7 +42,7 @@
 							<input class="btn btn-warning my-1 " type="submit" value="Submit">
 								</div>
 								</form>
-									</form>
+									
 								</div>
 					<!-- SIGN IN -->
 	     </ul>

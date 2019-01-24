@@ -71,19 +71,14 @@
 
 /* CSS FOOTER*/
 .footer{
-	
-  background: #333;
-  padding:30px;
+  background: #737373;
+  padding:28px;
   color:#fff;
-  margin-top:40px;
-  position:relative;
-  margin-top: -100px;
-  clear:both;
-
-}
-
-.colore{
-	background-color: white;
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 
