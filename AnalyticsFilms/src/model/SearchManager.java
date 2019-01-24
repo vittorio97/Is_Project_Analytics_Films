@@ -3,7 +3,6 @@
 
 import java.sql.Connection;
 
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -45,39 +44,10 @@ public class SearchManager {
         return film;
            
     }
-    public static <Collection> Cinema searchCinema(String TitoloFilm) throws SQLException
-   
-    {
-    	Connection con = ConnectionPool.getConnection();
-		PreparedStatement pstmt = null;		
-		ResultSet rs = null;
-		Collection <Cinema> cinema = null;
-		
-		
-
-	pstmt = con.prepareStatement(SEARCH_CINEMA_BY_TITOLOFILM);
-	
-	rs= pstmt.executeQuery();
-	
-	while(rs.next()){
-		String titoloFilm = rs.getString("TitoloFilm");
-		String trama= rs.getString("Trama");
-		String locandina=rs.getString("Locandina");
-		String categoria=rs.getString("Categoria");
-		
-		cinema.add(new Cinema());
-		
-	}
-	  
-	return cinema;
-    }
-
-   
-    	
   
     
     private static final String SEARCH_FILM_BY_TITOLO = "SELECT * FROM Film WHERE TitoloFilm = ?";
-    private static final String SEARCH_CINEMA_BY_TITOLOFILM = "SELECT Cinema FROM Cinema_Film WHERE TitoloFilm = ?";
+    
     
 
 }

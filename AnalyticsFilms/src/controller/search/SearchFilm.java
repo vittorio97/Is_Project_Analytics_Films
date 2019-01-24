@@ -2,8 +2,10 @@ package controller.search;
 
 	import java.io.IOException;
 
-
 	import java.sql.SQLException;
+	import java.util.Collection;
+
+	import javax.servlet.RequestDispatcher;
 	import javax.servlet.ServletException;
 	import javax.servlet.annotation.WebServlet;
 	import javax.servlet.http.HttpServlet;
@@ -20,7 +22,7 @@ package controller.search;
 	@WebServlet("/SearchFilm")
 	public class SearchFilm extends HttpServlet {
 		private static final long serialVersionUID = 1L;
-		
+		private SearchManager manager = new SearchManager();
 
 	    /**
 	     * @see HttpServlet#HttpServlet()
@@ -35,10 +37,10 @@ package controller.search;
 		 */
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			String titolo= request.getParameter("TitoloFilm");
-			Film film = new Film();
+			Collection <Film> films =null;
 			
 			try {
-				film = SearchManager.searchByTitolo(titolo);
+				films = manager.search(titolo);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
