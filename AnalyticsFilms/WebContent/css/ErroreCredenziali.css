@@ -1,0 +1,30 @@
+*{
+	margin : 0;
+	padding: 0;
+}
+
+html, body{
+	
+	height: 100%;
+	
+}
+
+
+
+#container{
+	
+	min-height: 100%;
+	
+}
+#main{
+	
+	position:absolute;
+	top:35%;
+	left:37%;
+	
+}
+.btn-warning{
+	position:absolute;
+	top:100%;
+	left:35%;
+}

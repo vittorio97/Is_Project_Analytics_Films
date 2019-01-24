@@ -4,38 +4,28 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link href="css/Statistics.css" type="text/css" rel="stylesheet" />
+<link href="../css/Statistics.css" type="text/css" rel="stylesheet" />
+<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
+<link href="../css/ShowPersonalInfo.css"  rel="stylesheet" />
 <title>Insert title here</title>
 </head>
 <body>
- <h1>Movie statistics </h1>
- <hr>
- <br>
- <br>
- <br>
- <img src="../img/images.png" >
- <h1> Reviews Added </h1>
- <br>
- <br>
- <form>
- 
- </form>
- <img  src="../img/download.png" style= "
- position: absolute;
-    left: 700px;
-    top: 100px;"
- >
- <h1 style="
-    position: absolute;
-    left: 700px;
-    top: 300px;
- ">  Movies Added </h1> 
- <br>
- <br>
- <form>
- 
- </form>
 
+<div id="container">
+		<div id="main">
+		<img class="UserLogo"src="../img/user.png" width="150px" height="150px">
+	
+  <div class="UsernameEmail">
+	<h3>Username:</h3>
+	<h5>Email:</h5>
+	<h5>Role:</h5>
+    </div>
+		
+</div>
+</div> 
+
+<%@ include file="Footer.jsp"%>
+ 
 
 </body>
 </html>
