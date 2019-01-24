@@ -52,7 +52,7 @@
 
   <div class="comment-wrap">
       <div class="photo">
-          <div class="avatar" style="background-image: url('')"></div>
+          <div class="avatar" style="background-image: url('../img/user.png')"></div>
       </div>
       <div class="comment-block">
           <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
@@ -66,7 +66,7 @@
 
   <div class="comment-wrap">
       <div class="photo">
-          <div class="avatar" style="background-image: url('')"></div>
+          <div class="avatar" style="background-image: url('../img/user.png')"></div>
       </div>
       <div class="comment-block">
           <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam.</p>
