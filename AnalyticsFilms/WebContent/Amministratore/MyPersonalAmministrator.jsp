@@ -18,10 +18,10 @@
 				 <h2 class="user">Username</h2>
 
 				<div class="btn-group">
-   		 		<a  href="#" class="btn btn-secondary">MoviesStatistics</a>
-   				<a  href="#" class="btn btn-secondary">UserStatistics</a>
+   		 	
+   				<a  href="Statistics.jsp" class="btn btn-secondary">Statistics</a>
 				<a  href="AggiungiFilm.jsp" class="btn btn-secondary">AddFilm</a>
-   				<a  href="#" class="btn btn-secondary">DeleteUser</a>
+   				<a  href="AccountUserList.jsp" class="btn btn-secondary">DeleteUser</a>
  				</div>
 
 	</section>
