@@ -12,7 +12,7 @@
 <title>AnalyticsFilms</title>
 </head>
 <body>
-
+<%@ include file= "HeaderLoggato.jsp"%>
 <div class="sectiontitle">
     <h2>Statistics</h2>
     <span class="headerLine"></span>
@@ -38,20 +38,14 @@
                 <span></span>
                 <p>Reviews added</p>
             </div>
-            <div class="item wow fadeInUpBig animated animated" data-number="" style="visibility: visible;">
-                <i class="fa fa-chart-bar"></i>
-                <p id="number3" class="number">AnalyticsFilms</p>
-                <span></span>
-                <p>Statistics</p>
-            </div>
+            
         </div>
     </div>
 </div>
 
 <script  src="../js/Statistics.js"></script>
 
-<%@ include file="Footer.jsp"%>
- 
+
 
 </body>
 </html>
