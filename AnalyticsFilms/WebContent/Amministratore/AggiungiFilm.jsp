@@ -4,69 +4,57 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
+<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
 <title>Insert title here</title>
 </head>
 <body>
 <h1> Aggiungi Film</h1>
-<br>
-<hr>
-<br>
-<h3> Nome</h3>
 
-<textarea name="testo" rows="3" cols="20"
-style="
-    position: absolute;
-    left: 400px;
-    top: 150px;">
- </textarea>
-<br>
+<form class="needs-validation" novalidate>
+ <!-- Nome film -->
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Name</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Name" value="" required>
+      <div class="valid-tooltip">
+      </div>
+    </div>
+  </div>
+ <!-- Trama Film -->
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+     <div class="form-group">
+    <label for="">Trama </label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  	</div>
+    </div>
+  
+   </div>
+ <div class="form-row">
+   	<div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Add a Poster</label>
+      <button type="button" class="btn btn-secondary btn-block" >Add Image</button>
+    </div>
+  </div>
+ <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Genere</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Genere" value="" required>
+      <div class="valid-tooltip">
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Date</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Date" value="" required>
+      <div class="valid-tooltip">
+      </div>
+    </div>
+  </div>
 
-<h3 style="
-    position: absolute;
-    down: 50px;
-    ">
- Trama in breve 
- </h3>
- 
-<textarea name ="trama" rows="10" cols="50"
-style="
-    position: absolute;
-    left: 400px;">
-</textarea>
-
-<h3
-style=" position:absolute;
-		bottom:220px;"> Inserisci locandina</h3>
-
-<h3 style="
-position:absolute;
-		bottom:100px;">
-		Genere</h3>
-		 
-<textarea name ="trama" rows="3" cols="40"
-style="
-    position: absolute;
-    left: 400px;
-    bottom:100px">
-</textarea>
-
-<h3 style="
-position:absolute;
-		bottom:5px;">
-		Data di uscita</h3>
-		 
-<textarea name ="trama" rows="2" cols="30"
-style="
-    position: absolute;
-    left: 400px;
-    bottom:10px">
-</textarea>
-
-<button
-style="
-position:absolute;
-left:800px;
-bottom:1px;"> Aggiungi </button>
-
+  <button class="btn btn-warning" type="submit">Add Movie</button>
+</form>
 </body>
 </html>
