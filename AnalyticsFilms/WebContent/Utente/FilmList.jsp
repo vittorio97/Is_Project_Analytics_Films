@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
 
 	<link href="css/HomePageStyle.css" type="text/css" rel="stylesheet" />
-<title>AnalyticsFilms</title>
+<title>Lista film</title>
 </head>
 <body>
 

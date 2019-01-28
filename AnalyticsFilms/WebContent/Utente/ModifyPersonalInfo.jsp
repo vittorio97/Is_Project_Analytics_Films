@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Modifica info personali</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 		<link href="../css/HomePageStyle.css" type="text/css" rel="stylesheet" />
 		<link href="../css/ModifyPersonalInfo.css" type="text/css" rel="stylesheet" />

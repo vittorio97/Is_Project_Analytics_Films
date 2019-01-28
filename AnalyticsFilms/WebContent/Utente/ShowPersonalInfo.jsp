@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Visualizza info personali</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-	
 		<link href="../css/ShowPersonalInfo.css" type="text/css" rel="stylesheet" />
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
@@ -14,7 +13,10 @@
 </head>
 <body>
  <%@ include file= "HeaderLoggato.jsp"%>
+	
 
+	<section id=cover1>
+	</section>
 <div id="container">
 		<div id="main">
 		<img class="UserLogo"src="../img/user.png" width="150px" height="150px">
