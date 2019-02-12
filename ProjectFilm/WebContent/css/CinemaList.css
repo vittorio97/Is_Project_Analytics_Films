@@ -1,0 +1,27 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+hmtl, body{
+	
+	height:100%;
+}
+#container{
+	
+	min-height:100%;
+}
+#main{
+	overflow:auto;
+}
+
+#main{
+	position:absolute;
+	padding-top: 160px;
+	left: 200px;
+	font-size: medium;
+}
+
+.line{
+	width: 1023px;
+}

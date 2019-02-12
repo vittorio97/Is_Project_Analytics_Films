@@ -1,0 +1,37 @@
+
+#profile-header{
+padding-top: 160px;
+position: absolute;
+left: 200px;
+}
+
+.user{
+  position: absolute;
+  top:200px;
+  left:220px;
+}
+
+.btn-group{
+
+  position: absolute;
+  bottom: 12px;
+  left:216px;
+}
+
+.container{
+  position: absolute;
+  top:400px;
+  left: 140px;
+}
+
+.fav-films{
+
+  position: absolute;
+  padding-top: 340px;
+  left: 160px;
+}
+
+.bd-placeholder-img {
+	
+	background: url(../img/avatar.png)
+}
