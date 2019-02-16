@@ -22,7 +22,8 @@
 	<h1> Nessun risultato per il film ricercato!</h1>
 	</div>
 	<% }else { %>
-		<img src = "<%=film.getLocandina() %>">
+		<div style= "margin-top:10%"> </div>
+		<img src = "<%=film.getLocandina()%>">
 <div class="btn-group" style= "margin-top:200px" action="../ShowReviews" >
 	
 		<form class="review" action="../ShowReviews" method="post">

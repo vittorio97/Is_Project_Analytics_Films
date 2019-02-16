@@ -20,12 +20,12 @@
 <%@ include file= "HeaderLoggato.jsp"%>
 
 
-<div id="container">
- <div id="main">
+
  
- 	</form>
+ 	<div style = "margin-top:10%">
  <h1>Lista Cinema </h1>
-  <br>
+ </div>
+  <div style= "margin-top: 3%">
 		
 		<%
 			Iterator <Cinema> it = cinema.iterator();
@@ -35,19 +35,17 @@
 				
 		%>
 
-		
-  <p><%=c1.getNome() %></p>
-  <p><%=c1.getLuogo() %> </p>
-  <p><%=c1.getOrario() %></p>
-  <br>
-  <hr noshade class="line">
-  <br>
+	<div style = "border: 1px solid">
+ 	<h2> Nome Cinema: <%=c1.getNome() %></h2>
+ <h3> Luogo:  <%=c1.getLuogo() %> </h3>
+  <h3> Orario di visione:  <%=c1.getOrario() %> </h3>
   
- </div>
-</div>
+  </div>
+  
+
 
 <% } %>
-
+</div>
 
 </body>
 </html>

@@ -39,8 +39,7 @@ public class SearchCinema extends HttpServlet {
 		
 		String titolo= request.getParameter("Cinema");
 		
-		System.out.println(titolo);
-		
+				
 		try {
 			cinema = SearchManager.searchCinema(titolo);
 		} catch (SQLException e) {

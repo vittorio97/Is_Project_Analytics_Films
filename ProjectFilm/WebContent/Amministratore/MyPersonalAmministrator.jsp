@@ -12,18 +12,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pagina personale Amministratore</title>
 </head>
-<body>
+<body style = "background-color: ivory;">
 	 <%@ include file= "HeaderAmministratore.jsp"%> 
 	 
-	 
- 	<h> Pagina personale Amministratore </h>
+	 <div style = "margin-top: 10%"> 
+ 	<h1>Amministrator Page </h1>
+ 	</div>
+ 	<div style= "margin-top:3%">
+ 		<ul style =  "background-color: orange;  list-style: none; padding: 0 2px; padding: right">
+ 		<form class= "ShowFilmList" action="../ShowFilmList" method="post">
  	
- 	<h1> Amministrator Info</h1>
+ 	
+ <li>	<button class= "btn btn-warning my-1" type="submit">  Lista dei film  </button> </li>
+ 	
+ 	 </form>
+ 	
+ 	<li> <button class= "btn btn-warning my-1" type="submit" onclick="window.location='AggiungiFilm.jsp'" > Aggiungi un film  </button> </li>
+ 	
+ 		
+ 	<form class= "ShowStatistics" action="../ShowStatistics" method="post">
+ 	
+ 	
+ 	<li> <button class= "btn btn-warning my-1" type="submit">  Visualizza Statistiche Sito  </button> </li>
+ 	</form>
+ 	
+  <form class= "ShowAccountList" action="../ShowAccountList" method="post"> 
+ 	
+ 	
+ 	<li> <button class= "btn btn-warning my-1" type="submit">  Lista Utenti  </button> </li>
+ 	</form>
+ 	</ul>
+ 	</div>
+ 	
+ 	
  		<hr>
  		<br>
  		<br>
  		<h1> Salve, <%= utente.getUsername() %> </h1>
- 		<h2>Benvenuto nella pagina amministratore</h2>
+ 		
  		
  		
  		<img src="../img/user.png" >
@@ -36,30 +62,6 @@
  		<h3> Role: <%=utente.getRuolo() %> </h3>
  		
  		
- 		
- 		<form class= "ShowFilmList" action="../ShowFilmList" method="post" style= margin-left:1000px>
- 	
- 	
- 	<button class= "btn btn-warning my-1" type="submit">  Lista dei film  </button>
- 	
- 	 </form>
- 	
- 	 <button class= "btn btn-warning my-1" type="submit" onclick="window.location='AggiungiFilm.jsp'" style=margin-left:1000px> Aggiungi un film  </button>
- 	
- 		
- 	<form class= "ShowStatistics" action="../ShowStatistics" method="post" style= margin-left:1000px>
- 	
- 	
- 	<button class= "btn btn-warning my-1" type="submit">  Visualizza Statistiche Sito  </button>
- 	</form>
- 	
- 	<form class= "ShowAccountList" action="../ShowAccountList" method="post" style= margin-left:1000px>
- 	
- 	
- 	<button class= "btn btn-warning my-1" type="submit">  Lista Utenti  </button>
- 	</form>
- 	
- 	
  		
 </body>
 </html>

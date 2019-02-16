@@ -59,7 +59,7 @@ public class ModifyFilm extends HttpServlet {
 		}
 		
 			
-			response.sendRedirect("Amministratore/FilmListAmministrator.jsp");
+			response.sendRedirect("Amministratore/MyPersonalAmministrator.jsp");
 	}
 
 	/**

@@ -22,7 +22,7 @@
 	
 	<section id="cover">
 			
-			<h1> Salve <%= utente.getUsername() %></h1>
+			
     		<a href="MyPersonalUser.jsp" class="btn btn-secondary">Personal Page</a>
 		
 		 <h1 class="titolo-cover">The social network for film lovers.</h1>

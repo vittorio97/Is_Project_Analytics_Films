@@ -20,20 +20,20 @@
   <div class="form-group">
   <h2>Aggiungi un film</h2>
     <label for="exampleInputEmail1">TitoloFilm</label>
-    <input type="text" class="form-control" name="TitoloFilm" placeholder="Inserisci titolo del film">
+    <input type="text" class="form-control" name="TitoloFilm" placeholder="Inserisci titolo del film" required>
     
   </div>
   
   <div class="form-group">
     <label for="exampleInputEmail1">Trama</label>
-    <textarea rows="5" cols="10" class="form-control" name= "Trama" placeholder="Inserisci trama"> </textarea>
+    <textarea rows="5" cols="10" class="form-control" name= "Trama" placeholder="Inserisci trama" required> </textarea>
     
   </div>
   
   
   <div class="form-group">
     <label for="exampleInputPassword1">Categoria</label>
-    <input type="text" class="form-control" name="Categoria" placeholder="Inserisci categoria">
+    <input type="text" class="form-control" name="Categoria" placeholder="Inserisci categoria"required>
   </div>
   
  

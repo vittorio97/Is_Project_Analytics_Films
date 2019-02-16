@@ -27,15 +27,14 @@
 				
 				<div class="btn-group" style= "margin-left:50px">
    		 		
-   		 		<form class="btn btn-secondary" action="../ShowPersonalInfo" method="post" >
+   		 		<form action="../ShowPersonalInfo" method="post" >
    		 		
    		 			
-   		 			<input class="btn btn-warning my-1 " type="submit" name ="Email" <%= utente.getEmail()%> value="<%= utente.getEmail()%>">
-   		 		
+   		 			<input class="btn btn-warning my-1 " type="submit" name ="Email" <%= utente.getEmail()%> value="PersonalInfo">   		 		
    		 		
    		 		
    		 		</form>
-   				<a  href="ModifyPersonalInfo.jsp" class="btn btn-secondary">EditInfo</a>
+   				<a  href="ModifyPersonalInfo.jsp" class="btn btn-warning my-1">EditInfo</a>
 
  				</div>
 
@@ -44,14 +43,15 @@
 	<h4 class="fav-films" style="position: absolute; padding-top: 340px; left: 160px;">SUGGESTED MOVIES</h4>
 
 	<div class="container" style=" position: absolute; top: 400px; left: 140px;">
-		<div class="row">
+		<div class="row" style = "margin-left:15%">
 			<div class="col-4-row ml-3">
 				<div class="card" style="width:18rem;">
 					<img src="../locandine/aquaman.jpg" alt="Card One" class=card-img-top>
 					<div class="card-body">
-						<h5 class="card-title">Card One</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="#" class="btn btn-warning">Vai al film</a>
+						<h5 class="card-title">AQUAMAN</h5>
+						<p>Arthur Curry viene a sapere che è l'erede del regno sottomarino di Atlantide
+								e deve farsi avanti per guidare il suo popolo ed essere un eroe per il mondo.</p>
+						
 
 					</div>
 				</div>
@@ -60,20 +60,23 @@
 				<div class="card" style="width:18rem;">
 					<img src="../locandine/suspiria.jpg" alt="Card Two" class=card-img-top>
 					<div class="card-body">
-						<h5 class="card-title">Card Two</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="#" class="btn btn-warning">Vai al film</a>
+						<h5 class="card-title">SUSPIRIA</h5>
+						<p>Un'oscurità turbina al centro di una compagnia di danza di fama mondiale, che inghiottirà il direttore artistico della troupe,
+								un'ambiziosa giovane ballerina e una dolorosa psicoterapeuta. Alcuni soccomberanno all'incubo, altri finalmente si sveglieranno.</p>
+              </p>
+						
 
 					</div>
 				</div>
 			</div>
 			<div class="col-4-row ml-3">
 				<div class="card" style="width:18rem;">
-					<img src="../locandine/aquaman.jpg" alt="Card Three" class=card-img-top>
+					<img src="../locandine/RestaconMe.jpg" alt="Card Three" class=card-img-top>
 					<div class="card-body">
-						<h5 class="card-title">Card One</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="#" class="btn btn-warning">Vai al film</a>
+						<h5 class="card-title">RESTA CON ME</h5>
+						<p>Un violento uragano distrugge il veliero sul quale viaggiano Tami e Richard. A causa delle gravi ferite riportate, 
+						la donna è costretta a prendere il comando dell'imbarcazione e salvare entrambi.</p>
+					
 
 					</div>
 				</div>

@@ -14,16 +14,16 @@
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
 </head>
-<title>Insert title here</title>
+<title>Personal Info</title>
 <body>
 <%@ include file= "HeaderLoggato.jsp"%>
 	
 	<div style= margin-top:200px;>
 	
 	</div>
-	 <img class= "UserLogo" src="../img/user.png" width="125px" height="125px">
+	 <img class= "UserLogo" src="../img/user.png" width="125px" height="125px" style= "margin-left:-350px">
 		
-		  <div class="Username">
+		  <div style= "margin-top:300px">
 		
 		<h1> Email: <%= utente.getEmail() %> </h1>
 		

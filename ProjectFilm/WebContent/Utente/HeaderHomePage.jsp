@@ -31,8 +31,8 @@
 				<div class = "flex-form-container">
 				
 				<form class="login" action="../Login" method="post">
-						Email: <input type="text" name="email">
-						Password: <input type="password" name="password"><br>
+						Email: <input type="text" name="email" required>
+						Password: <input type="password" name="password" required><br>
 							<div class="ForgotPassword">
 							<a href= "RecovePassword.jsp"  > Forgot password? </a>
 							<input class="btn btn-warning my-1 " type="submit" value="Submit">

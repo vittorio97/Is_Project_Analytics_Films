@@ -21,8 +21,8 @@
 	
 	<form action= "../ModifyFilm" action="post">
 <h1> Modifica Film </h1>
-<br>
-<hr>
+
+<div style= " margin-top:8%"> </div>
 <h2> <%= titoloFilm %></h2>
 <br>
 
@@ -30,18 +30,16 @@
     position: absolute;
     down: 50px;
     ">
- Trama in breve 
+ Trama
  </h3>
  
 <textarea name ="Trama" rows="10" cols="50"
 style="
     position: absolute;
-    left: 400px;">
+    left: 400px;"required>
 </textarea>
 
-<h3
-style=" position:absolute;
-		bottom:220px;"> Modifica locandina</h3>
+
 
 <h3 style="
 position:absolute;
@@ -52,7 +50,7 @@ position:absolute;
 style="
     position: absolute;
     left: 400px;
-    bottom:100px">
+    bottom:100px" required>
 </textarea>
 
 <h3 style="

@@ -55,7 +55,7 @@ public class ModifyPersonalInfo extends HttpServlet {
 		}
 		
 			
-			response.sendRedirect("Utente/MyPersonalUser.jsp");
+			response.sendRedirect("Utente/Homepage.jsp");
 	}
 
 	

@@ -32,13 +32,13 @@
 	
 		
 			<div class="container-immagine" style="height:450px; width:20%">
-				<img style="height:100%; width:100%" align="left" src="<%=film1.getLocandina()%>" alt="#"
+				<img style="height:100%; width:100%" align="left" src="<%=film1.getLocandina()%>" alt="Locandina in arrivo"
 					itemprop="image" style="margin-right: 5px;">
 		</div>
 		<div class="container-informazioni-film" style="width:80%;position:absolute;top:0;right:0;">
 		<h1><%=film1.getTitoloFilm() %></h1>
 		
-			
+			<h1> <%= film1.getTrama() %> (<%=film1.getCategoria() %>)</h1>
 				
 				<button class= "btn btn-warning my-1" type="submit"  onclick="window.location='ModifyFilm.jsp?TitoloFilm=<%=film1.getTitoloFilm() %>&?Locandina=<%=film1.getLocandina() %>'" style=margin-left:1000px> Modifica </button>
 				

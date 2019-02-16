@@ -7,6 +7,7 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,34 +16,32 @@
 <title>Statistics</title>
 </head>
 <body>
- <h1>Movie statistics </h1>
- <hr>
- <br>
- <br>
- <br>
+	<%@ include file= "HeaderAmministratore.jsp"%> 
+	
+	
+	<div style = "margin-top: 12%">
+	</div>
+	<div>
+ <h2> Numero di Utenti Registrati: <%= userN %></h2>
+ 
+ 
  <img src="../img/images.png" >
- <h1> <%= reviewN %> </h1>
- <br>
- <br>
- <form>
  
- </form>
- <img  src="../img/download.png" style= "
- position: absolute;
-    left: 700px;
-    top: 100px;"
- >
- <h1 style="
-    position: absolute;
-    left: 700px;
-    top: 300px;
- ">  <%= filmN %> </h1> 
- <br>
- <br>
- <form>
  
- </form>
+
+<h2> Numero di Film: <%= filmN %></h2>
+ <img  src="../img/download.png">
+ 
 
 
+ <h2> Numero di Recensioni: <%= reviewN %> </h2>
+ 
+ 
+ <img src="../img/images.png" >
+ 
+ 
+
+
+</div>
 </body>
 </html>

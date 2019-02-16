@@ -16,7 +16,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="css/Utente.css" type="text/css" rel="stylesheet" />
-<title>Insert title here</title>
+<title>Film</title>
 </head>
 <body>
 	<%@ include file="HeaderLoggato.jsp"%>
@@ -34,7 +34,7 @@
 	%>
 
 
-	<div class="btn-btn" style="margin-top: 140px">
+	<div class="btn-btn" style="margin-top: 140px"></div>
 
 		<h1>
 			<%=film.getTitoloFilm()%>
@@ -43,71 +43,70 @@
 
 
 
-		<div id="trama" class="op-schede" style="display: block;">
+		<div id="trama" class="op-schede" style="display: block;height:440px;">
 
 
 
 
 			<div class="trama">
-				<img align="left" src="<%=film.getLocandina()%>" alt="#"
-					itemprop="image" style="margin-right: 5px;">
+				<img align="left" src="<%=film.getLocandina()%>"  alt="#"
+					itemprop="image" style="margin-right: 5px; max-width:300px;">
 
 
-				<h2 itemprop="description">
-					Genere:
-					<%=film.getCategoria()%></h2>
+			
+		
 
 
 				<h1>TRAMA</h1>
-				<h2><%=film.getTrama()%></h2>
+				<h3><%=film.getTrama()%> (<%=film.getCategoria()%>)</h3>
 
 
 			<form class="cinema" action="../SearchCinema" method="post">
 						
 							
-				<input class="btn btn-warning my-1 " type="submit" name ="Cinema" <%= film.getTitoloFilm()%> value="<%= film.getTitoloFilm()%>">
-								
+				<input class="btn btn-warning my-1 " type="submit" value="Cerca Cinema">
+						<input type = "hidden" name ="Cinema" value="<%= film.getTitoloFilm()%>">		
 								</form>
 				
   	
-  	
+  	</div>
   	
  	
 			</div>
 
-		</div>
-
-
-
+	
+	<h1> Recensioni</h1>
+<div style = "width:50%;  background: ivory"> 
 		<%
 			Iterator<Recensione> it = recensione.iterator();
 				while (it.hasNext()) {
 					Recensione rec1 = it.next();
 		%>
 
-
-		<h1><%=rec1.getTitolo()%>
-		</h1>
-		<h1><%=rec1.getTesto()%>
-		</h1>
-
-
-		<%
-			}
-		%>
+<div style = "margin-top:1%; border-radius: 10px; border: 2px solid orange ; background: ivory">
+		<h2><%=rec1.getTitolo()%>
+		</h2>
+		<h3><%=rec1.getTesto()%>
+		</h3>
+</div>
 
 		<%
 			}
 		%>
 
+		<%
+			}
+		%>
 
+</div>
 
+	<div style="position:relative;">
 
-	<form action= "../InsertReview" method="post">
-	
-	Titolo: <input type="text" name="Titolo"><br>
+	<form action= "../InsertReview" method="post" style="position:absolute; right:0; margin-top:-20%;margin-right:8%;">
+		<h2>Inserisci recensione</h2>
+	<h3>Titolo</h3> <input type="text" name="Titolo"><br>
   
-  	Testo: <textarea rows="4" cols="50" name="Testo">
+  	<h3>Testo</h3> <textarea rows="4" cols="50" name="Testo">
 	
 	
 </textarea> <br>
@@ -122,13 +121,13 @@
   	
   	
   	
- 	 <input type="submit"  value="Submit">
+ 	 <input type="submit" class="btn btn-warning my-1 "  value="Submit" style= "float: right">
  	 
 </form>
-	
+	</div>
 	
 
-	</div>
+	
 
 
 	
