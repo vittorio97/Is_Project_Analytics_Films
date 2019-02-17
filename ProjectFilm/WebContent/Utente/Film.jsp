@@ -104,12 +104,9 @@
 
 	<form action= "../InsertReview" method="post" style="position:absolute; right:0; margin-top:-20%;margin-right:8%;">
 		<h2>Inserisci recensione</h2>
-	<h3>Titolo</h3> <input type="text" name="Titolo"><br>
+	<h3>Titolo</h3> <input type="text" name="Titolo" required ><br>
   
-  	<h3>Testo</h3> <textarea rows="4" cols="50" name="Testo">
-	
-	
-</textarea> <br>
+  	<h3>Testo</h3> <textarea rows="4" cols="50" name="Testo" placeholder="Inserisci testo" required> </textarea> <br>
   	
   	<div name= "NomeUtente" <%= utente.getEmail() %>>
   	
@@ -121,7 +118,7 @@
   	
   	
   	
- 	 <input type="submit" class="btn btn-warning my-1 "  value="Submit" style= "float: right">
+ 	 <input type="submit" class="btn btn-warning my-1 "  value="Submit" style= "float: right" required>
  	 
 </form>
 	</div>
